@@ -8,7 +8,7 @@ export default function Dashboard(props) {
   return (
     <div>
       <User user={props.user} />
-      <FavouriteSongs />
+      <FavouriteSongs tracks={props.tracks} />
       <TopTen />
       <Discover />
     </div>

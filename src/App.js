@@ -21,28 +21,50 @@ class App extends Component {
         .then(response => response.json())
         .then(data =>
           this.setState({
-            serverData: {
-              user: {
-                name: data.display_name,
-                product: data.product,
-                imageUrl: data.images[0].url
-              }
+            user: {
+              name: data.display_name,
+              product: data.product,
+              imageUrl: data.images[0].url
             }
+          })
+        );
+
+      fetch("https://api.spotify.com/v1/me/top/tracks", {
+        headers: { Authorization: "Bearer " + accessToken }
+      })
+        .then(response => response.json())
+        .then(data =>
+          this.setState({
+            tracks: data.items
           })
         );
     }
   }
   render() {
+    // TODO: für später
+    // let topTracksToRender =
+    //   this.state.serverData.user && this.state.serverData.user.tracks
+    //     ? this.state.serverData.user.tracks.filter(playlist =>
+    //         playlist.name
+    //           .toLowerCase()
+    //           .includes(this.state.filterString.toLowerCase())
+    //       )
+    //     : [];
+
     return (
       <div className="App">
         <Header />
-        <Main serverData={this.state.serverData} initLogin={this.initLogin} />
+        <Main
+          user={this.state.user}
+          tracks={this.state.tracks}
+          initLogin={this.initLogin}
+        />
       </div>
     );
   }
 
   initLogin = () =>
-    (window.location = window.location.includes("localhost")
+    (window.location = window.location.href.includes("localhost")
       ? "http://localhost:8888/login"
       : "http://spotilyse-backend.herokuapp.com/login");
 }
