@@ -29,7 +29,7 @@ class App extends Component {
           })
         );
 
-      fetch("https://api.spotify.com/v1/me/top/tracks", {
+      fetch("https://api.spotify.com/v1/me/top/tracks?limit=10", {
         headers: { Authorization: "Bearer " + accessToken }
       })
         .then(response => response.json())
