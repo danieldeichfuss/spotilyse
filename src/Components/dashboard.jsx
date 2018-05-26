@@ -8,9 +8,16 @@ export default function Dashboard(props) {
   return (
     <div>
       <User user={props.user} />
-      <FavouriteSongs tracks={props.tracks} />
-      <TopTen />
+      <FavouriteSongs
+        favouriteSong={props.tracks[0]}
+        favouriteArtist={props.artists[0]}
+      />
+      <TopTen tracks={props.tracks} artists={props.artists} />
       <Discover />
     </div>
   );
+}
+
+{
+  /* favouriteSong={favouriteSong} favouriteArtist={favouriteArtist} */
 }

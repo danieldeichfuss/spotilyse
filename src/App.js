@@ -14,7 +14,9 @@ class App extends Component {
   componentDidMount() {
     let parsed = queryString.parse(window.location.search);
     let accessToken = parsed.access_token;
+
     if (accessToken) {
+      // Get user
       fetch("https://api.spotify.com/v1/me", {
         headers: { Authorization: "Bearer " + accessToken }
       })
@@ -29,6 +31,7 @@ class App extends Component {
           })
         );
 
+      // Get Top Tracks
       fetch("https://api.spotify.com/v1/me/top/tracks?limit=10", {
         headers: { Authorization: "Bearer " + accessToken }
       })
@@ -38,8 +41,20 @@ class App extends Component {
             tracks: data.items
           })
         );
+
+      // Get Top Artists
+      fetch("https://api.spotify.com/v1/me/top/artists?limit=10", {
+        headers: { Authorization: "Bearer " + accessToken }
+      })
+        .then(response => response.json())
+        .then(data =>
+          this.setState({
+            artists: data.items
+          })
+        );
     }
   }
+
   render() {
     // TODO: für später
     // let topTracksToRender =
@@ -57,6 +72,7 @@ class App extends Component {
         <Main
           user={this.state.user}
           tracks={this.state.tracks}
+          artists={this.state.artists}
           initLogin={this.initLogin}
         />
       </div>
