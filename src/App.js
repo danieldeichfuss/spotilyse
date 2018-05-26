@@ -41,7 +41,10 @@ class App extends Component {
     );
   }
 
-  initLogin = () => (window.location = "http://localhost:8888/login");
+  initLogin = () =>
+    (window.location = window.location.includes("localhost")
+      ? "http://localhost:8888/login"
+      : "http://spotilyse-backend.herokuapp.com/login");
 }
 
 export default App;
