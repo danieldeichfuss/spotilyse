@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
+import Header from "./Components/header";
+import Main from "./Components/main";
 import queryString from "query-string";
 
 class App extends Component {
@@ -31,30 +33,15 @@ class App extends Component {
     }
   }
   render() {
-    let user = this.state.serverData.user ? this.state.serverData.user : false;
-
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Spotilyse</h1>
-        </header>
-        <p className="App-intro">Your Spotify personality dashboard</p>
-        {this.state.serverData.user ? (
-          <div>
-            <img src={user.imageUrl} alt="" />
-            <h2>{user.name}</h2>
-            <span>{user.product}</span>
-          </div>
-        ) : (
-          <button
-            onClick={() => (window.location = "http://localhost:8888/login")}
-          >
-            Login
-          </button>
-        )}
+        <Header />
+        <Main serverData={this.state.serverData} initLogin={this.initLogin} />
       </div>
     );
   }
+
+  initLogin = () => (window.location = "http://localhost:8888/login");
 }
 
 export default App;
