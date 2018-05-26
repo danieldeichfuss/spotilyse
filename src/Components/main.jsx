@@ -1,16 +1,14 @@
 import React from "react";
+import Dashboard from "./dashboard";
+import Login from "./login";
 
 export default function Main(props) {
   const serverData = props.serverData;
   let user = props.serverData.user ? props.serverData.user : false;
   const main = serverData.user ? (
-    <div>
-      <img src={user.imageUrl} alt="" />
-      <h2>{user.name}</h2>
-      <span>{user.product}</span>
-    </div>
+    <Dashboard user={user} />
   ) : (
-    <button onClick={props.initLogin}>Login</button>
+    <Login initLogin={props.initLogin} />
   );
   return main;
 }
