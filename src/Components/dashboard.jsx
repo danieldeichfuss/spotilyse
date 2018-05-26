@@ -17,7 +17,3 @@ export default function Dashboard(props) {
     </div>
   );
 }
-
-{
-  /* favouriteSong={favouriteSong} favouriteArtist={favouriteArtist} */
-}
