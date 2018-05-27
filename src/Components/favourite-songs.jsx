@@ -3,8 +3,6 @@ import React from "react";
 export default function FavouriteSongs(props) {
   let favouriteSong = props.favouriteSong || null;
   let favouriteArtist = props.favouriteArtist || null;
-  console.log(favouriteSong);
-  console.log(favouriteArtist);
 
   return (
     <div>
