@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function FavouriteSongs(props) {
+export default function FavouriteSong(props) {
   let favouriteSong = props.favouriteSong || null;
   let favouriteArtist = props.favouriteArtist || null;
 
