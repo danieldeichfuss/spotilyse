@@ -31,17 +31,6 @@ class App extends Component {
           })
         );
 
-      // Get Top Tracks
-      fetch("https://api.spotify.com/v1/me/top/tracks?limit=10", {
-        headers: { Authorization: "Bearer " + accessToken }
-      })
-        .then(response => response.json())
-        .then(data =>
-          this.setState({
-            tracks: data.items
-          })
-        );
-
       // Get Top Artists
       fetch("https://api.spotify.com/v1/me/top/artists?limit=10", {
         headers: { Authorization: "Bearer " + accessToken }
@@ -52,6 +41,38 @@ class App extends Component {
             artists: data.items
           })
         );
+
+      // Get Top Tracks
+      fetch("https://api.spotify.com/v1/me/top/tracks?limit=10", {
+        headers: { Authorization: "Bearer " + accessToken }
+      })
+        .then(response => response.json())
+        .then(data => {
+          this.setState({
+            tracks: data.items
+          });
+          fetch(data.items[0].href, {
+            headers: { Authorization: "Bearer " + accessToken }
+          })
+            .then(response => response.json())
+            .then(data =>
+              this.setState({
+                favouriteTrack: data
+              })
+            );
+          fetch(
+            "https://api.spotify.com/v1/audio-features/" + data.items[0].id,
+            {
+              headers: { Authorization: "Bearer " + accessToken }
+            }
+          )
+            .then(response => response.json())
+            .then(data =>
+              this.setState({
+                favouriteTrackFeatures: data
+              })
+            );
+        });
     }
   }
 
@@ -73,6 +94,8 @@ class App extends Component {
           user={this.state.user}
           tracks={this.state.tracks}
           artists={this.state.artists}
+          favouriteTrack={this.state.favouriteTrack}
+          favouriteTrackFeatures={this.state.favouriteTrackFeatures}
           initLogin={this.initLogin}
         />
       </div>
