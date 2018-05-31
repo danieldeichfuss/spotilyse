@@ -51,6 +51,7 @@ class App extends Component {
           this.setState({
             tracks: data.items
           });
+          // Get Favourite Track
           fetch(data.items[0].href, {
             headers: { Authorization: "Bearer " + accessToken }
           })
@@ -60,6 +61,7 @@ class App extends Component {
                 favouriteTrack: data
               })
             );
+          // Get Favourite Track Audio Features
           fetch(
             "https://api.spotify.com/v1/audio-features/" + data.items[0].id,
             {
@@ -86,7 +88,7 @@ class App extends Component {
     //           .includes(this.state.filterString.toLowerCase())
     //       )
     //     : [];
-
+    console.log(this.accessToken);
     return (
       <div className="App">
         <Header />
