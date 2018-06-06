@@ -5,37 +5,46 @@ class Discover extends Component {
   constructor() {
     super();
     this.state = {
-      serverData: {}
+      isLoading: true
     };
+
+    this.getRelatedArtists = this.getRelatedArtists.bind();
   }
 
   componentDidMount() {
     let favouriteArtist = this.props.favouriteArtist || null;
     let parsed = queryString.parse(window.location.search);
-    let accessToken = parsed.access_token;
-    let selectedArtistId = favouriteArtist && favouriteArtist.id;
-
-    if (accessToken && selectedArtistId) {
-      fetch(
-        "https://api.spotify.com/v1/artists/" +
-          selectedArtistId +
-          "/related-artists",
-        {
-          headers: { Authorization: "Bearer " + accessToken }
-        }
-      )
-        .then(response => response.json())
-        .then(data =>
-          this.setState({
-            relatedArtists: data
-          })
-        );
-    }
+    this.setState = { accessToken: parsed.access_token };
+    this.getRelatedArtists(favouriteArtist);
   }
+
+  getRelatedArtists(artist) {
+    fetch(
+      "https://api.spotify.com/v1/artists/" + artist.id + "/related-artists",
+      {
+        headers: { Authorization: "Bearer " + this.state.accessToken }
+      }
+    )
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          relatedArtists: data
+        });
+      });
+  }
+
   render() {
     let artistsToRender = this.state.relatedArtists
-      ? this.state.relatedArtists.map((artist, i) => (
-          <li key={i.toString()}>{artist.name}</li>
+      ? this.state.relatedArtists.artists.map((artist, i) => (
+          <li key={i.toString()}>
+            <a
+              onClick={() => {
+                this.getRelatedArtists(artist);
+              }}
+            >
+              {artist.name}
+            </a>
+          </li>
         ))
       : "";
     let favouriteArtistName = this.props.favouriteArtist

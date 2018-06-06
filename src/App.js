@@ -2,22 +2,23 @@ import React, { Component } from "react";
 import "./App.css";
 import Header from "./Components/header";
 import Main from "./Components/main";
+import Login from "./Components/login";
 import queryString from "query-string";
 
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      serverData: {}
-    };
+    this.state = { isLoading: false, isLoggedIn: false };
   }
   componentDidMount() {
     let parsed = queryString.parse(window.location.search);
     let accessToken = parsed.access_token;
+    this.setState({ isLoading: true });
+    accessToken && this.setState({ isLoggedIn: true });
 
     if (accessToken) {
       // Get user
-      fetch("https://api.spotify.com/v1/me", {
+      const userPromise = fetch("https://api.spotify.com/v1/me", {
         headers: { Authorization: "Bearer " + accessToken }
       })
         .then(response => response.json())
@@ -32,9 +33,12 @@ class App extends Component {
         );
 
       // Get Top Artists
-      fetch("https://api.spotify.com/v1/me/top/artists?limit=10", {
-        headers: { Authorization: "Bearer " + accessToken }
-      })
+      const topArtistsPromise = fetch(
+        "https://api.spotify.com/v1/me/top/artists?limit=10",
+        {
+          headers: { Authorization: "Bearer " + accessToken }
+        }
+      )
         .then(response => response.json())
         .then(data =>
           this.setState({
@@ -43,9 +47,12 @@ class App extends Component {
         );
 
       // Get Top Tracks
-      fetch("https://api.spotify.com/v1/me/top/tracks?limit=10", {
-        headers: { Authorization: "Bearer " + accessToken }
-      })
+      const topTracksPromise = fetch(
+        "https://api.spotify.com/v1/me/top/tracks?limit=10",
+        {
+          headers: { Authorization: "Bearer " + accessToken }
+        }
+      )
         .then(response => response.json())
         .then(data => {
           this.setState({
@@ -75,6 +82,14 @@ class App extends Component {
               })
             );
         });
+
+      Promise.all([userPromise, topArtistsPromise, topTracksPromise]).then(
+        () => {
+          this.setState({
+            isLoading: false
+          });
+        }
+      );
     }
   }
 
@@ -88,20 +103,30 @@ class App extends Component {
     //           .includes(this.state.filterString.toLowerCase())
     //       )
     //     : [];
-    console.log(this.accessToken);
-    return (
-      <div className="App">
-        <Header />
-        <Main
-          user={this.state.user}
-          tracks={this.state.tracks}
-          artists={this.state.artists}
-          favouriteTrack={this.state.favouriteTrack}
-          favouriteTrackFeatures={this.state.favouriteTrackFeatures}
-          initLogin={this.initLogin}
-        />
-      </div>
-    );
+
+    if (!this.state.isLoggedIn) {
+      return <Login initLogin={this.initLogin} />;
+    }
+
+    if (this.state.isLoading) {
+      return <div>...Loading</div>;
+    }
+
+    if (!this.state.isLoading) {
+      return (
+        <div className="App">
+          <Header />
+          <Main
+            user={this.state.user}
+            tracks={this.state.tracks}
+            artists={this.state.artists}
+            favouriteTrack={this.state.favouriteTrack}
+            favouriteTrackFeatures={this.state.favouriteTrackFeatures}
+            initLogin={this.initLogin}
+          />
+        </div>
+      );
+    }
   }
 
   initLogin = () =>

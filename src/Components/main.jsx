@@ -22,5 +22,13 @@ export default function Main(props) {
   ) : (
     <Login initLogin={props.initLogin} />
   );
-  return main;
+  return (
+    <Dashboard
+      user={user}
+      tracks={tracks}
+      artists={artists}
+      favouriteTrack={favouriteTrack}
+      favouriteTrackFeatures={favouriteTrackFeatures}
+    />
+  );
 }
