@@ -16,81 +16,75 @@ class App extends Component {
     this.setState({ isLoading: true });
     accessToken && this.setState({ isLoggedIn: true });
 
-    if (accessToken) {
-      // Get user
-      const userPromise = fetch("https://api.spotify.com/v1/me", {
-        headers: { Authorization: "Bearer " + accessToken }
-      })
-        .then(response => response.json())
-        .then(data =>
-          this.setState({
-            user: {
-              name: data.display_name,
-              product: data.product,
-              imageUrl: data.images[0].url
-            }
-          })
-        );
-
-      // Get Top Artists
-      const topArtistsPromise = fetch(
-        "https://api.spotify.com/v1/me/top/artists?limit=10",
-        {
-          headers: { Authorization: "Bearer " + accessToken }
-        }
-      )
-        .then(response => response.json())
-        .then(data =>
-          this.setState({
-            artists: data.items
-          })
-        );
-
-      // Get Top Tracks
-      const topTracksPromise = fetch(
-        "https://api.spotify.com/v1/me/top/tracks?limit=10",
-        {
-          headers: { Authorization: "Bearer " + accessToken }
-        }
-      )
-        .then(response => response.json())
-        .then(data => {
-          this.setState({
-            tracks: data.items
-          });
-          // Get Favourite Track
-          fetch(data.items[0].href, {
-            headers: { Authorization: "Bearer " + accessToken }
-          })
-            .then(response => response.json())
-            .then(data =>
-              this.setState({
-                favouriteTrack: data
-              })
-            );
-          // Get Favourite Track Audio Features
-          fetch(
-            "https://api.spotify.com/v1/audio-features/" + data.items[0].id,
-            {
-              headers: { Authorization: "Bearer " + accessToken }
-            }
-          )
-            .then(response => response.json())
-            .then(data =>
-              this.setState({
-                favouriteTrackFeatures: data
-              })
-            );
-        });
-
-      Promise.all([userPromise, topArtistsPromise, topTracksPromise]).then(
-        () => {
-          this.setState({
-            isLoading: false
-          });
-        }
+    if (!accessToken) return;
+    // Get user
+    const userPromise = fetch("https://api.spotify.com/v1/me", {
+      headers: { Authorization: "Bearer " + accessToken }
+    })
+      .then(response => response.json())
+      .then(data =>
+        this.setState({
+          user: {
+            name: data.display_name,
+            product: data.product,
+            imageUrl: data.images[0].url
+          }
+        })
       );
-    }
+
+    // Get Top Artists
+    const topArtistsPromise = fetch(
+      "https://api.spotify.com/v1/me/top/artists?limit=10",
+      {
+        headers: { Authorization: "Bearer " + accessToken }
+      }
+    )
+      .then(response => response.json())
+      .then(data =>
+        this.setState({
+          artists: data.items
+        })
+      );
+
+    // Get Top Tracks
+    const topTracksPromise = fetch(
+      "https://api.spotify.com/v1/me/top/tracks?limit=10",
+      {
+        headers: { Authorization: "Bearer " + accessToken }
+      }
+    )
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          tracks: data.items
+        });
+        // Get Favourite Track
+        fetch(data.items[0].href, {
+          headers: { Authorization: "Bearer " + accessToken }
+        })
+          .then(response => response.json())
+          .then(data =>
+            this.setState({
+              favouriteTrack: data
+            })
+          );
+        // Get Favourite Track Audio Features
+        fetch("https://api.spotify.com/v1/audio-features/" + data.items[0].id, {
+          headers: { Authorization: "Bearer " + accessToken }
+        })
+          .then(response => response.json())
+          .then(data =>
+            this.setState({
+              favouriteTrackFeatures: data
+            })
+          );
+      });
+
+    Promise.all([userPromise, topArtistsPromise, topTracksPromise]).then(() => {
+      this.setState({
+        isLoading: false
+      });
+    });
   }
 
   render() {
