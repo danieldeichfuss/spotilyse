@@ -101,6 +101,7 @@ class App extends Component {
     if (!this.state.isLoggedIn) {
       return (
         <div className="App">
+          <Header />
           <Login initLogin={this.initLogin} />
         </div>
       );
@@ -109,6 +110,7 @@ class App extends Component {
     if (this.state.isLoading) {
       return (
         <div className="App">
+          <Header />
           {/* TODO: extract component spinner */}
           <div className="Spinner">...Loading</div>
         </div>
