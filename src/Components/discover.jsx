@@ -2,16 +2,16 @@ import React, { Component } from "react";
 import queryString from "query-string";
 
 class Discover extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.getRelatedArtists = this.getRelatedArtists.bind(this);
     this.state = {
+      selectedArtist: props.favouriteArtist,
       relatedArtists: null
     };
   }
 
   componentDidMount() {
-    let favouriteArtist = this.props.favouriteArtist;
     let parsed = queryString.parse(window.location.search);
     let accessToken = parsed.access_token;
     this.setState({
@@ -20,10 +20,13 @@ class Discover extends Component {
 
     if (!accessToken) return;
 
-    this.getRelatedArtists(favouriteArtist, accessToken);
+    this.getRelatedArtists(this.state.selectedArtist, accessToken);
   }
 
   getRelatedArtists(artist, accessToken) {
+    this.setState({
+      selectedArtist: artist
+    });
     fetch(
       "https://api.spotify.com/v1/artists/" + artist.id + "/related-artists",
       {
@@ -52,14 +55,14 @@ class Discover extends Component {
           </li>
         ))
       : "";
-    let favouriteArtistName = this.props.favouriteArtist
-      ? this.props.favouriteArtist.name
+    let selectedArtist = this.state.selectedArtist
+      ? this.state.selectedArtist.name
       : "";
 
     return (
       <div>
         <h2>Discover your favourite Artists</h2>
-        <p>Favourite Artist: {favouriteArtistName}</p>
+        <p>Selected Artist: {selectedArtist}</p>
         <ul>{artistsToRender}</ul>
       </div>
     );
