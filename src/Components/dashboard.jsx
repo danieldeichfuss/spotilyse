@@ -15,7 +15,7 @@ export default function Dashboard(props) {
         favouriteTrackFeatures={props.favouriteTrackFeatures}
       />
       <TopTen tracks={props.tracks} artists={props.artists} />
-      <Discover />
+      <Discover favouriteArtist={props.artists[0]} />
     </div>
   );
 }
