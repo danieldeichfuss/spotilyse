@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
 import Header from "./Components/header";
-import Main from "./Components/main";
 import Login from "./Components/login";
+import Dashboard from "./Components/dashboard";
 import queryString from "query-string";
 
 class App extends Component {
@@ -119,13 +119,12 @@ class App extends Component {
       return (
         <div className="App">
           <Header />
-          <Main
+          <Dashboard
             user={this.state.user}
             tracks={this.state.tracks}
             artists={this.state.artists}
             favouriteTrack={this.state.favouriteTrack}
             favouriteTrackFeatures={this.state.favouriteTrackFeatures}
-            initLogin={this.initLogin}
           />
         </div>
       );
