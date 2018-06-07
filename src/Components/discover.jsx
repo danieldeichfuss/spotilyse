@@ -60,9 +60,11 @@ class Discover extends Component {
       : "";
 
     return (
-      <div>
-        <h2>Discover your favourite Artists</h2>
-        <p>Selected Artist: {selectedArtist}</p>
+      <div className="Discover">
+        <h2 className="Discover__title">Discover your favourite Artists</h2>
+        <p className="Discover__selected-artist">
+          Selected Artist: {selectedArtist}
+        </p>
         <ul>{artistsToRender}</ul>
       </div>
     );

@@ -5,7 +5,7 @@ export default function FavouriteSong(props) {
   let favouriteArtist = props.favouriteArtist || null;
 
   return (
-    <div>
+    <div className="FavouriteSong">
       <h2>What your favourite songs say about you</h2>
       <div>Your favourite song is: {favouriteSong && favouriteSong.name}</div>
       <div>

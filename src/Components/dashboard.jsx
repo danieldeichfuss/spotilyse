@@ -6,7 +6,7 @@ import Discover from "./discover";
 
 export default function Dashboard(props) {
   return (
-    <div>
+    <div className="Dashboard">
       <User user={props.user} />
       <FavouriteSong
         favouriteSong={props.tracks[0]}
