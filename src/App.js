@@ -99,11 +99,20 @@ class App extends Component {
     //     : [];
 
     if (!this.state.isLoggedIn) {
-      return <Login initLogin={this.initLogin} />;
+      return (
+        <div className="App">
+          <Login initLogin={this.initLogin} />
+        </div>
+      );
     }
 
     if (this.state.isLoading) {
-      return <div>...Loading</div>;
+      return (
+        <div className="App">
+          {/* TODO: extract component spinner */}
+          <div className="Spinner">...Loading</div>
+        </div>
+      );
     }
 
     if (!this.state.isLoading) {
