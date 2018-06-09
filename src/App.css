@@ -1,14 +1,12 @@
 body {
-  background: #121212;
-  color: #fff;
-  font-family: "Open Sans", sans-serif;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
 }
 
 .Header {
   padding-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
 .Header__logo {
@@ -17,26 +15,51 @@ body {
 }
 
 .Header__title {
-  display: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-size: 5em;
+  margin-bottom: 0;
 }
 
 .Header__intro {
-  display: flex;
-  justify-content: center;
   font-size: 1.5em;
 }
 
 .Login {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Login__eyes {
+  width: 100px;
 }
 
 .Login__button {
-  background: #000;
-  color: #fff;
-  font-size: 1.5em;
-  width: 150px;
+  border: 1px solid #000000;
+  color: #000000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-size: 2em;
   height: 75px;
+  margin: 50px 0;
+
+  /* TODO: cleanup transition */
+  transition: all 500ms;
+  transition-timing-function: ease-in-out;
+}
+
+.Login__button:hover {
+  color: #ffffff;
+  background: #000000;
+
+  /* TODO: cleanup transition */
+  transition: all 500ms;
+  transition-timing-function: ease-in-out;
+}
+
+.Login__intro {
+  margin: 0;
 }
 
 .Spinner {
@@ -57,13 +80,9 @@ body {
   align-self: center;
 }
 
-.User__name {
-  font-size: 2em;
-}
-
-.User__product {
-  font-size: 1.5em;
-  text-transform: capitalize;
+.User__intro {
+  margin: 50px 15% 0 15%;
+  text-align: center;
 }
 
 /* TODO: Do something with this */
