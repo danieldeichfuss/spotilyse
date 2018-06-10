@@ -85,6 +85,32 @@ body {
   text-align: center;
 }
 
+.Tabs__list {
+  list-style-type: none;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.Tab {
+  display: inline;
+  margin: 0 25px;
+  cursor: pointer;
+  padding: 15px 0;
+}
+
+.Tab:hover {
+  background: #fefeee;
+  border-bottom: 2px solid #000000;
+}
+
+.Tab.active {
+  border-bottom: 2px solid #000000;
+}
+
+.Dashboard {
+  margin: 0 10%;
+}
+
 /* TODO: Do something with this */
 @keyframes Spinner-logo-spin {
   from {

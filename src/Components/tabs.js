@@ -34,9 +34,9 @@ export default class Tabs extends React.Component {
 
   render() {
     return (
-      <div>
-        <ul className="tabs">{this.renderTabs()}</ul>
-        <div className="tabs-active-content">{this.renderActiveContent()}</div>
+      <div className="Tabs">
+        <ul className="Tabs__list">{this.renderTabs()}</ul>
+        <div className="Tabs__active-content">{this.renderActiveContent()}</div>
       </div>
     );
   }
