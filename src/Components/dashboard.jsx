@@ -3,15 +3,16 @@ import User from "./user";
 import FavouriteSong from "./favourite-song";
 import TopTen from "./top-ten";
 import Discover from "./discover";
-import Tabs from './tabs';
-import Tab from './tab';
-
+import Tabs from "./tabs";
+import Tab from "./tab";
 
 export default function Dashboard(props) {
   return (
     <div className="Dashboard">
       <Tabs>
-        <Tab tabName="User"><User user={props.user} /></Tab>
+        <Tab tabName="User">
+          <User user={props.user} />
+        </Tab>
         <Tab tabName="Favourite Song">
           <FavouriteSong
             favouriteSong={props.tracks[0]}
