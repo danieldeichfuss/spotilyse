@@ -89,6 +89,7 @@ body {
   list-style-type: none;
   text-align: center;
   margin-bottom: 50px;
+  white-space: nowrap;
 }
 
 .Tab {

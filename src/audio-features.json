@@ -1,0 +1,30 @@
+{
+  "acousticness": {
+    "name": "Acousticness",
+    "breakPoint": 0.5,
+    "messages": [
+      {
+        "text": "You like handmade music",
+        "emojiPath": ".."
+      },
+      {
+        "text": "Humans are stupid, give me robot music",
+        "emojiPath": ".."
+      }
+    ]
+  },
+  "danceability": {
+    "name": "Danceability",
+    "breakPoint": 0.5,
+    "messages": [
+      {
+        "text": "You dance like nobody is watching",
+        "emojiPath": ".."
+      },
+      {
+        "text": "Steady like a stone, dancing is for the crazies",
+        "emojiPath": ".."
+      }
+    ]
+  }
+}
