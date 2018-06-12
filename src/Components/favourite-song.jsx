@@ -22,12 +22,17 @@ export default function FavouriteSong({
 
   return (
     <div className="FavouriteSong">
-      <h2>What your favourite songs say about you?</h2>
-      <div>Your favourite song is: {favouriteSong && favouriteSong.name}</div>
-      <div>
-        Your favourite artist is: {favouriteArtist && favouriteArtist.name}
+      <h2 className="FavouriteSong__intro">
+        What your favourite songs say about you?
+      </h2>
+      <div className="FavouriteSong__song">
+        <b>Your favourite song is:</b> {favouriteSong && favouriteSong.name}
       </div>
-      {audioFeaturesToRender}
+      <div className="FavouriteSong__artist">
+        <b>Your favourite artist is:</b>{" "}
+        {favouriteArtist && favouriteArtist.name}
+      </div>
+      <div className="AudioFeatures">{audioFeaturesToRender}</div>
     </div>
   );
 }

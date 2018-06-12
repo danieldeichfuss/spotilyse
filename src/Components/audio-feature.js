@@ -5,7 +5,7 @@ import dancer from "../img/dancer-male.svg";
 import stone from "../img/stone.svg";
 import thunder from "../img/thunder.svg";
 import sunglasses from "../img/sunglasses.svg";
-import mikrophones from "../img/mikrophone.svg";
+import mikrophone from "../img/mikrophone.svg";
 import headphones from "../img/headphones.svg";
 import cloud from "../img/cloud.svg";
 import ear from "../img/ear.svg";
@@ -21,6 +21,7 @@ const AudioFeature = ({ audioFeature, featureValue }) => {
       : audioFeature.messages[0];
   let img = null;
 
+  // TODO: Find a better solution
   switch (message.img) {
     case "guitar":
       img = guitar;
@@ -40,8 +41,8 @@ const AudioFeature = ({ audioFeature, featureValue }) => {
     case "sunglasses":
       img = sunglasses;
       break;
-    case "mikrophones":
-      img = mikrophones;
+    case "mikrophone":
+      img = mikrophone;
       break;
     case "headphones":
       img = headphones;
@@ -71,12 +72,12 @@ const AudioFeature = ({ audioFeature, featureValue }) => {
   console.log(audioFeature.name);
 
   return (
-    <div className="AudioFeatures__item">
-      <div className="AudioFeatures__value">
+    <div className="AudioFeature">
+      <div className="AudioFeature__value">
         {audioFeature.name}: {featureValue}
       </div>
-      <div className="AudioFeatures__result">{message.text}</div>
-      <img src={img} alt="emoji" />
+      <div className="AudioFeature__result">{message.text}</div>
+      <img className="AudioFeature__img" src={img} alt="emoji" />
     </div>
   );
 };

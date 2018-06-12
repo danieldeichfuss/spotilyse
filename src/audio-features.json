@@ -54,7 +54,8 @@
       "messages": [
         {
           "text": "Concerts are the best",
-          "imgPath": "../img/mikrophone.svg"
+          "imgPath": "../img/mikrophone.svg",
+          "img": "mikrophone"
         },
         {
           "text": "Please be quiet people, I want to enjoy my music",

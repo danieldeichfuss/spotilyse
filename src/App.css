@@ -112,6 +112,26 @@ body {
   margin: 0 10%;
 }
 
+.FavouriteSong {
+  text-align: center;
+}
+
+.AudioFeatures {
+  padding: 50px 0;
+}
+
+.AudioFeature {
+  padding: 25px 0;
+}
+
+.AudioFeature__img {
+  width: 75px;
+}
+
+.AudioFeature__value {
+  text-transform: capitalize;
+}
+
 /* TODO: Do something with this */
 @keyframes Spinner-logo-spin {
   from {
