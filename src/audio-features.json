@@ -1,30 +1,102 @@
 {
-  "acousticness": {
-    "name": "Acousticness",
-    "breakPoint": 0.5,
-    "messages": [
-      {
-        "text": "You like handmade music",
-        "emojiPath": ".."
-      },
-      {
-        "text": "Humans are stupid, give me robot music",
-        "emojiPath": ".."
-      }
-    ]
-  },
-  "danceability": {
-    "name": "Danceability",
-    "breakPoint": 0.5,
-    "messages": [
-      {
-        "text": "You dance like nobody is watching",
-        "emojiPath": ".."
-      },
-      {
-        "text": "Steady like a stone, dancing is for the crazies",
-        "emojiPath": ".."
-      }
-    ]
-  }
+  "audioFeatures": [
+    {
+      "name": "acousticness",
+      "breakPoint": 0.5,
+      "messages": [
+        {
+          "text": "You like handmade music",
+          "emojiPath": ".."
+        },
+        {
+          "text": "Humans are stupid, give me robot music",
+          "emojiPath": ".."
+        }
+      ]
+    },
+    {
+      "name": "danceability",
+      "breakPoint": 0.5,
+      "messages": [
+        {
+          "text": "You dance like nobody is watching",
+          "emojiPath": ".."
+        },
+        {
+          "text": "Steady like a stone, dancing is for the crazies",
+          "emojiPath": ".."
+        }
+      ]
+    },
+    {
+      "name": "energy",
+      "breakPoint": 0.5,
+      "messages": [
+        {
+          "text": "You are pumped! Gimme some of your energiezzzzz",
+          "emojiPath": ".."
+        },
+        {
+          "text": "Keep it mellow my friend",
+          "emojiPath": ".."
+        }
+      ]
+    },
+    {
+      "name": "liveness",
+      "breakPoint": 0.5,
+      "messages": [
+        {
+          "text": "Concerts are the best",
+          "emojiPath": ".."
+        },
+        {
+          "text": "Please be quiet people, I want to enjoy my music",
+          "emojiPath": ".."
+        }
+      ]
+    },
+    {
+      "name": "loudness",
+      "breakPoint": 0,
+      "messages": [
+        {
+          "text": "Be careful, protect your ears!",
+          "emojiPath": ".."
+        },
+        {
+          "text": "You ears are safe",
+          "emojiPath": ".."
+        }
+      ]
+    },
+    {
+      "name": "tempo",
+      "breakPoint": 72,
+      "messages": [
+        {
+          "text": "You like it fast",
+          "emojiPath": ".."
+        },
+        {
+          "text": "You like it slow",
+          "emojiPath": ".."
+        }
+      ]
+    },
+    {
+      "name": "valence",
+      "breakPoint": 0.5,
+      "messages": [
+        {
+          "text": "You are a positive person! Keep up the good vibes",
+          "emojiPath": ".."
+        },
+        {
+          "text": "The world is a dark place",
+          "emojiPath": ".."
+        }
+      ]
+    }
+  ]
 }
