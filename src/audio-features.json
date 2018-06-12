@@ -6,11 +6,13 @@
       "messages": [
         {
           "text": "You like handmade music",
-          "emojiPath": ".."
+          "imgPath": "../img/guitar.svg",
+          "img": "guitar"
         },
         {
           "text": "Humans are stupid, give me robot music",
-          "emojiPath": ".."
+          "imgPath": "/img/robot.svg",
+          "img": "robot"
         }
       ]
     },
@@ -20,11 +22,13 @@
       "messages": [
         {
           "text": "You dance like nobody is watching",
-          "emojiPath": ".."
+          "imgPath": "../img/dancer-male.svg",
+          "img": "dancer"
         },
         {
           "text": "Steady like a stone, dancing is for the crazies",
-          "emojiPath": ".."
+          "imgPath": "../img/stone.svg",
+          "img": "stone"
         }
       ]
     },
@@ -34,11 +38,13 @@
       "messages": [
         {
           "text": "You are pumped! Gimme some of your energiezzzzz",
-          "emojiPath": ".."
+          "imgPath": "../img/thunder.svg",
+          "img": "thunder"
         },
         {
           "text": "Keep it mellow my friend",
-          "emojiPath": ".."
+          "imgPath": "../img/sunglasses.svg",
+          "img": "sunglasses"
         }
       ]
     },
@@ -48,11 +54,12 @@
       "messages": [
         {
           "text": "Concerts are the best",
-          "emojiPath": ".."
+          "imgPath": "../img/mikrophone.svg"
         },
         {
           "text": "Please be quiet people, I want to enjoy my music",
-          "emojiPath": ".."
+          "imgPath": "../img/headphones.svg",
+          "img": "headphones"
         }
       ]
     },
@@ -62,11 +69,13 @@
       "messages": [
         {
           "text": "Be careful, protect your ears!",
-          "emojiPath": ".."
+          "imgPath": "../img/ear.svg",
+          "img": "ear"
         },
         {
           "text": "You ears are safe",
-          "emojiPath": ".."
+          "imgPath": "../img/cloud.svg",
+          "img": "cloud"
         }
       ]
     },
@@ -76,11 +85,13 @@
       "messages": [
         {
           "text": "You like it fast",
-          "emojiPath": ".."
+          "imgPath": "../img/bunny.svg",
+          "img": "bunny"
         },
         {
           "text": "You like it slow",
-          "emojiPath": ".."
+          "imgPath": "../img/snail.svg",
+          "img": "snail"
         }
       ]
     },
@@ -90,11 +101,13 @@
       "messages": [
         {
           "text": "You are a positive person! Keep up the good vibes",
-          "emojiPath": ".."
+          "imgPath": "../img/sun.svg",
+          "img": "sun"
         },
         {
           "text": "The world is a dark place",
-          "emojiPath": ".."
+          "imgPath": "../img/sad.svg",
+          "img": "sad"
         }
       ]
     }
