@@ -100,7 +100,8 @@ body {
 }
 
 .Tab:hover {
-  background: #fefeee;
+  background: #000000;
+  color: #ffffff;
   border-bottom: 2px solid #000000;
 }
 
