@@ -114,7 +114,6 @@ body {
 }
 
 .FavouriteSong {
-  text-align: center;
 }
 
 .AudioFeatures {
@@ -122,15 +121,31 @@ body {
 }
 
 .AudioFeature {
+  justify-items: begin;
   padding: 25px 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(3, auto);
+  grid-row-gap: 10px;
+  text-transform: capitalize;
 }
 
-.AudioFeature__img {
-  width: 75px;
+.AudioFeature__title,
+.AudioFeature__value {
+  display: inline;
 }
 
 .AudioFeature__value {
-  text-transform: capitalize;
+  padding-left: 10px;
+}
+
+.AudioFeature__img {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  width: 150px;
+  justify-self: end;
 }
 
 /* TODO: Do something with this */

@@ -1,4 +1,5 @@
 import React from "react";
+import Bar from "./bar";
 import guitar from "../img/guitar.svg";
 import robot from "../img/robot.svg";
 import dancer from "../img/dancer-male.svg";
@@ -73,10 +74,12 @@ const AudioFeature = ({ audioFeature, featureValue }) => {
 
   return (
     <div className="AudioFeature">
-      <div className="AudioFeature__value">
-        {audioFeature.name}: {featureValue}
+      <div className="AudioFeature__intro-wrapper">
+        <h3 className="AudioFeature__title">{audioFeature.name}:</h3>
+        <span className="AudioFeature__value">{featureValue}</span>
       </div>
-      <div className="AudioFeature__result">{message.text}</div>
+      <Bar />
+      <div className="AudioFeature__message">{message.text}</div>
       <img className="AudioFeature__img" src={img} alt="emoji" />
     </div>
   );
