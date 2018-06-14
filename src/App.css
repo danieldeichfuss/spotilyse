@@ -85,11 +85,17 @@ body {
   text-align: center;
 }
 
+.Tabs__active-content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
 .Tabs__list {
   list-style-type: none;
   text-align: center;
   margin-bottom: 50px;
   white-space: nowrap;
+  padding: 0;
 }
 
 .Tab {
@@ -113,11 +119,17 @@ body {
   margin: 0 10%;
 }
 
-.FavouriteSong {
+.FavouriteSong__intro,
+.FavouriteSong__song,
+.FavouriteSong__artist {
+  text-align: center;
 }
 
 .AudioFeatures {
   padding: 50px 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 50px;
 }
 
 .AudioFeature {
