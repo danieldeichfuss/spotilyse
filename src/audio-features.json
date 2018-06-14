@@ -3,6 +3,7 @@
     {
       "name": "acousticness",
       "breakPoint": 0.5,
+      "unit": "%",
       "messages": [
         {
           "text": "You like handmade music",
@@ -19,6 +20,7 @@
     {
       "name": "danceability",
       "breakPoint": 0.5,
+      "unit": "%",
       "messages": [
         {
           "text": "You dance like nobody is watching",
@@ -35,6 +37,7 @@
     {
       "name": "energy",
       "breakPoint": 0.5,
+      "unit": "%",
       "messages": [
         {
           "text": "You are pumped! Gimme some of your energiezzzzz",
@@ -51,6 +54,7 @@
     {
       "name": "liveness",
       "breakPoint": 0.5,
+      "unit": "%",
       "messages": [
         {
           "text": "Concerts are the best",
@@ -65,8 +69,26 @@
       ]
     },
     {
+      "name": "valence",
+      "breakPoint": 0.5,
+      "unit": "%",
+      "messages": [
+        {
+          "text": "You are a positive person! Keep up the good vibes",
+          "imgPath": "../img/sun.svg",
+          "img": "sun"
+        },
+        {
+          "text": "The world is a dark place",
+          "imgPath": "../img/sad.svg",
+          "img": "sad"
+        }
+      ]
+    },
+    {
       "name": "loudness",
       "breakPoint": 0,
+      "unit": "db",
       "messages": [
         {
           "text": "Be careful, protect your ears!",
@@ -83,6 +105,7 @@
     {
       "name": "tempo",
       "breakPoint": 72,
+      "unit": "bpm",
       "messages": [
         {
           "text": "You like it fast",
@@ -93,22 +116,6 @@
           "text": "You like it slow",
           "imgPath": "../img/snail.svg",
           "img": "snail"
-        }
-      ]
-    },
-    {
-      "name": "valence",
-      "breakPoint": 0.5,
-      "messages": [
-        {
-          "text": "You are a positive person! Keep up the good vibes",
-          "imgPath": "../img/sun.svg",
-          "img": "sun"
-        },
-        {
-          "text": "The world is a dark place",
-          "imgPath": "../img/sad.svg",
-          "img": "sad"
         }
       ]
     }

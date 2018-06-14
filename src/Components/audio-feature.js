@@ -70,15 +70,21 @@ const AudioFeature = ({ audioFeature, featureValue }) => {
       img = null;
   }
 
-  console.log(audioFeature.name);
+  let featureValueProcessed = featureValue;
+
+  if (audioFeature.unit === "%") {
+    featureValueProcessed = featureValue * 100;
+  }
+
+  featureValueProcessed = Math.floor(featureValueProcessed) + audioFeature.unit;
 
   return (
     <div className="AudioFeature">
       <div className="AudioFeature__intro-wrapper">
         <h3 className="AudioFeature__title">{audioFeature.name}:</h3>
-        <span className="AudioFeature__value">{featureValue}</span>
+        <span className="AudioFeature__value">{featureValueProcessed}</span>
       </div>
-      <Bar />
+      {audioFeature.unit === "%" && <Bar value={featureValueProcessed} />}
       <div className="AudioFeature__message">{message.text}</div>
       <img className="AudioFeature__img" src={img} alt="emoji" />
     </div>

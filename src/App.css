@@ -139,6 +139,7 @@ body {
   grid-template-columns: auto auto;
   grid-template-rows: repeat(3, auto);
   grid-row-gap: 10px;
+  grid-column-gap: 15px;
   text-transform: capitalize;
 }
 
@@ -158,6 +159,26 @@ body {
   grid-row-end: 4;
   width: 150px;
   justify-self: end;
+}
+
+.Bar {
+  width: 100%;
+  background: #4e4d4d;
+  color: #ffffff;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.Bar__item {
+  display: flex;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.Bar__value {
+  align-self: center;
+  padding-left: 15px;
+  font-weight: 800;
 }
 
 /* TODO: Do something with this */
