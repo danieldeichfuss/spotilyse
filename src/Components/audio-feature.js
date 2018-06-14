@@ -17,7 +17,7 @@ import sun from "../img/sun.svg";
 
 const AudioFeature = ({ audioFeature, featureValue }) => {
   const message =
-    featureValue > audioFeature.breakPoint
+    featureValue < audioFeature.breakPoint
       ? audioFeature.messages[1]
       : audioFeature.messages[0];
   let img = null;
