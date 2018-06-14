@@ -4,8 +4,6 @@ const Bar = props => {
   const colors = ["#8867D7", "#C839A5", "#F663AD", "#E8C37E"];
   const colorIndex = Math.floor(Math.random() * Math.floor(4));
 
-  console.log(colors[colorIndex]);
-
   const barStyle = {
     width: props.value,
     background: colors[colorIndex]
