@@ -7,6 +7,7 @@
     "ajv-keywords": "^3.2.0",
     "mo-js": "^0.288.2",
     "react": "^16.3.2",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.3.2",
     "react-scripts": "1.1.4",
     "react-transition-group": "^2.3.1"
