@@ -150,6 +150,7 @@ body {
 
 .AudioFeature__value {
   padding-left: 10px;
+  font-weight: 400;
 }
 
 .AudioFeature__img {
