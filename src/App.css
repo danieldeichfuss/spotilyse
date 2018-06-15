@@ -175,18 +175,22 @@ body {
   display: flex;
   height: 50px;
   border-radius: 5px;
+}
+
+.Bar:hover .Bar__item {
   animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+  animation-delay: 200ms;
 }
 
 @keyframes pulse-dot {
   0% {
-    transform: scale(1.1);
-  }
-  50% {
     transform: scale(1);
   }
-  100% {
+  50% {
     transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -197,7 +201,7 @@ body {
 
 .AppearTransition-appear.AppearTransition-appear-active {
   opacity: 1;
-  transform: translateX(0px);
+  transform: translateX(0);
   transition: all 750ms ease-out;
 }
 
