@@ -168,6 +168,7 @@ body {
   color: #ffffff;
   height: 50px;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .Bar__item {
