@@ -1,4 +1,5 @@
 import React from "react";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 const Bar = props => {
   const colors = ["#8867D7", "#C839A5", "#F663AD", "#E8C37E"];
@@ -11,9 +12,17 @@ const Bar = props => {
 
   return (
     <div className="Bar">
-      <div style={barStyle} className="Bar__item">
-        <span className="Bar__value">{props.value}</span>
-      </div>
+      <ReactCSSTransitionGroup
+        transitionName="AppearTransition"
+        transitionAppear={true}
+        transitionAppearTimeout={1000}
+        transitionEnter={false}
+        transitionLeave={false}
+      >
+        <div className="Bar__item" style={barStyle}>
+          <span className="Bar__value">{props.value}</span>
+        </div>
+      </ReactCSSTransitionGroup>
     </div>
   );
 };
