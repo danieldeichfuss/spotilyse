@@ -4,6 +4,16 @@ body {
   font-weight: 100;
 }
 
+h2 {
+  text-align: center;
+  font-size: 4em;
+}
+
+h3 {
+  text-align: center;
+  font-size: 3em;
+}
+
 .Header {
   padding-bottom: 50px;
   text-align: center;
