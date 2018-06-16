@@ -155,6 +155,20 @@ h3 {
 
 .Tab__link.active {
   border-bottom: 2px solid #000000;
+  color: #ffffff;
+}
+
+.Tab__link.active::after {
+  background: #333333;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #333333;
+  z-index: -1;
 }
 
 .Dashboard {
