@@ -15,8 +15,8 @@ const Tab = props => {
       chosenS = Math.floor(Math.random() * shapes.length);
 
     const burst = new mojs.Burst({
-      left: itemDim.left + itemSize.x / 2,
-      top: itemDim.top + itemSize.y / 2,
+      left: 0,
+      top: 0,
       radiusX: itemSize.x,
       radiusY: itemSize.y,
       count: 8,
@@ -35,8 +35,8 @@ const Tab = props => {
         isShowEnd: false
       }
     });
-
-    burst.play();
+    burst.tune({ x: e.pageX, y: e.pageY });
+    burst.replay();
   };
 
   return (
