@@ -4,16 +4,6 @@ body {
   font-weight: 100;
 }
 
-h2 {
-  text-align: center;
-  font-size: 4em;
-}
-
-h3 {
-  text-align: center;
-  font-size: 3em;
-}
-
 .Header {
   padding-bottom: 50px;
   text-align: center;
@@ -268,6 +258,18 @@ h3 {
   align-self: center;
   padding-left: 15px;
   font-weight: 800;
+}
+
+.TopTen__title {
+  display: none;
+}
+
+.TopTen__sub-title,
+.Discover__title,
+.FavouriteSong__intro {
+  text-align: center;
+  font-size: 2em;
+  text-decoration: underline;
 }
 
 .TopTen__list {
