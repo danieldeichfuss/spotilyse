@@ -1,13 +1,16 @@
 import React from "react";
 import mojs from "mo-js";
 
-const Tab = props => {
-  const links = document.querySelectorAll(".Tab__link");
+class Tab extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isPlay: false
+    };
+  }
 
-  links.forEach(link => link.addEventListener("click", shootLines));
-
-  function shootLines(e) {
-    const itemDim = this.getBoundingClientRect(),
+  shootLines(e) {
+    const itemDim = e.currentTarget.getBoundingClientRect(),
       itemSize = {
         x: itemDim.right - itemDim.left,
         y: itemDim.bottom - itemDim.top
@@ -44,19 +47,25 @@ const Tab = props => {
     burst.play();
   }
 
-  return (
-    <li className="Tab">
-      <a
-        className={`Tab__link ${props.isActive ? "active" : ""}`}
-        onClick={event => {
-          event.preventDefault();
-          props.onClick(props.tabIndex);
-        }}
-      >
-        {props.tabName}
-      </a>
-    </li>
-  );
-};
+  shouldComponentUpdate() {
+    return false;
+  }
+
+  render() {
+    return (
+      <li className="Tab" onClick={this.shootLines}>
+        <a
+          className={`Tab__link ${this.props.isActive ? "active" : ""}`}
+          onClick={event => {
+            event.preventDefault();
+            this.props.onClick(this.props.tabIndex);
+          }}
+        >
+          {this.props.tabName}
+        </a>
+      </li>
+    );
+  }
+}
 
 export default Tab;
