@@ -269,6 +269,7 @@ body {
   margin: 1em 0;
   position: relative;
   width: 100%;
+  color: #ffffff;
 }
 
 .TopTen__item:before {
@@ -289,9 +290,7 @@ body {
 }
 
 .TopTen__item > span {
-  background: #8e44ad;
   border-radius: 4px;
-  color: #fff;
   display: inline-block;
   position: relative;
   line-height: 2em;
@@ -310,24 +309,24 @@ body {
   height: 50%;
   max-width: 300px;
   z-index: -1;
-  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
-  transform: rotate(3deg);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
+  transform: rotate(1deg);
 }
 
 .TopTen__item:nth-child(2n)::before {
-  background: #8867d7;
+  background: #ffffff;
   border-color: #2c3e50;
-  box-shadow: 0 0 0 3px #8867d7;
+  box-shadow: 0 0 0 3px #ffffff;
 }
 
 .TopTen__item:nth-child(2n) > span {
-  background: #8867d7;
+  background: #2c3e50;
 }
 
 .TopTen__item:nth-child(2n + 1)::before {
-  background: #c839a5;
+  background: #ffffff;
   border-color: #2c3e50;
-  box-shadow: 0 0 0 3px #c839a5;
+  box-shadow: 0 0 0 3px #ffffff;
 }
 
 .TopTen__item:nth-child(2n + 1) > span {
@@ -335,9 +334,9 @@ body {
 }
 
 .TopTen__item:nth-child(3n + 1)::before {
-  background: #f663ad;
+  background: #ffffff;
   border-color: #2c3e50;
-  box-shadow: 0 0 0 3px #f663ad;
+  box-shadow: 0 0 0 3px #ffffff;
 }
 
 .TopTen__item:nth-child(3n + 1) > span {
@@ -345,9 +344,9 @@ body {
 }
 
 .TopTen__item:nth-child(4n + 1)::before {
-  background: #e8c37e;
+  background: #ffffff;
   border-color: #2c3e50;
-  box-shadow: 0 0 0 3px #e8c37e;
+  box-shadow: 0 0 0 3px #ffffff;
 }
 .TopTen__item:nth-child(4n + 1) > span {
   background: #e8c37e;

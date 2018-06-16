@@ -1,4 +1,5 @@
 import React from "react";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 export default function TopTen(props) {
   const tracksToRender =
@@ -19,9 +20,25 @@ export default function TopTen(props) {
     <div className="TopTen">
       <h2 className="TopTen__title">Your Top 10</h2>
       <h3 className="TopTen__sub-title">Top 10 Tracks</h3>
-      <ol className="TopTen__list">{tracksToRender}</ol>
+      <ReactCSSTransitionGroup
+        transitionName="AppearTransition"
+        transitionAppear={true}
+        transitionAppearTimeout={1000}
+        transitionEnter={false}
+        transitionLeave={false}
+      >
+        <ol className="TopTen__list">{tracksToRender}</ol>
+      </ReactCSSTransitionGroup>
       <h3 className="TopTen__sub-title">Top 10 Artists</h3>
-      <ol className="TopTen__list">{artistsToRender}</ol>
+      <ReactCSSTransitionGroup
+        transitionName="AppearTransition"
+        transitionAppear={true}
+        transitionAppearTimeout={1000}
+        transitionEnter={false}
+        transitionLeave={false}
+      >
+        <ol className="TopTen__list">{artistsToRender}</ol>
+      </ReactCSSTransitionGroup>
     </div>
   );
 }
