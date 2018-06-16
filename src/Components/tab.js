@@ -2,7 +2,7 @@ import React from "react";
 import mojs from "mo-js";
 
 const Tab = props => {
-  const links = document.querySelectorAll("a");
+  const links = document.querySelectorAll(".Tab__link");
 
   links.forEach(link => link.addEventListener("click", shootLines));
 
@@ -29,14 +29,13 @@ const Tab = props => {
       children: {
         shape: shapes[chosenS],
         radius: 10,
-        scale: { 0.8: 1 },
+        scale: { 0: 1.5 },
         fill: "none",
         points: 7,
         stroke: colors[chosenC],
         strokeDasharray: "100%",
         strokeDashoffset: { "-100%": "100%" },
         duration: 350,
-        delay: 100,
         easing: "quad.out",
         isShowEnd: false
       }
