@@ -252,3 +252,101 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.TopTen__list {
+  counter-reset: top-ten-list;
+  display: inline-block;
+  margin-left: -3.4em;
+  vertical-align: middle;
+  position: relative;
+  list-style-type: none;
+}
+
+.TopTen__item {
+  counter-increment: my-awesome-list;
+  margin: 1em 0;
+  position: relative;
+  width: 100%;
+}
+
+.TopTen__item:before {
+  content: counter(my-awesome-list, decimal-leading-zero);
+  background: #fff;
+  border: 10px solid #2c3e50;
+  border-radius: 50%;
+  color: #4e4d4d;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.8em;
+  line-height: 2.6em;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 2.6em;
+  z-index: 2;
+}
+
+.TopTen__item > span {
+  background: #8e44ad;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  line-height: 2em;
+  margin: 0 0 0 -2em;
+  padding: 1.2em 2em 1.2em 3em;
+  vertical-align: middle;
+}
+
+.TopTen__item > span::after {
+  background: transparent;
+  content: "";
+  position: absolute;
+  top: 24%;
+  right: 2%;
+  width: 50%;
+  height: 50%;
+  max-width: 300px;
+  z-index: -1;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+  transform: rotate(3deg);
+}
+
+.TopTen__item:nth-child(2n)::before {
+  background: #8867d7;
+  border-color: #2c3e50;
+  box-shadow: 0 0 0 3px #8867d7;
+}
+
+.TopTen__item:nth-child(2n) > span {
+  background: #8867d7;
+}
+
+.TopTen__item:nth-child(2n + 1)::before {
+  background: #c839a5;
+  border-color: #2c3e50;
+  box-shadow: 0 0 0 3px #c839a5;
+}
+
+.TopTen__item:nth-child(2n + 1) > span {
+  background: #c839a5;
+}
+
+.TopTen__item:nth-child(3n + 1)::before {
+  background: #f663ad;
+  border-color: #2c3e50;
+  box-shadow: 0 0 0 3px #f663ad;
+}
+
+.TopTen__item:nth-child(3n + 1) > span {
+  background: #f663ad;
+}
+
+.TopTen__item:nth-child(4n + 1)::before {
+  background: #e8c37e;
+  border-color: #2c3e50;
+  box-shadow: 0 0 0 3px #e8c37e;
+}
+.TopTen__item:nth-child(4n + 1) > span {
+  background: #e8c37e;
+}
