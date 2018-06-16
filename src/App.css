@@ -128,7 +128,7 @@ h3 {
   border-bottom: 2px solid #000000;
 }
 
-.Tab__link:after {
+.Tab__link::after {
   content: "";
   display: block;
   position: absolute;
@@ -141,7 +141,7 @@ h3 {
   transition: all 0.1s cubic-bezier(0, 0.59, 1, 0.26);
 }
 
-.Tab__link:hover:after {
+.Tab__link:hover::after {
   content: "";
   display: block;
   position: absolute;
