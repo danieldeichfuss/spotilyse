@@ -245,16 +245,6 @@ body {
   font-weight: 800;
 }
 
-/* TODO: Do something with this */
-@keyframes Spinner-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .TopTen__list {
   counter-reset: top-ten-list;
   display: inline-block;
@@ -265,15 +255,20 @@ body {
 }
 
 .TopTen__item {
-  counter-increment: my-awesome-list;
+  counter-increment: top-ten-list;
   margin: 1em 0;
   position: relative;
   width: 100%;
   color: #ffffff;
 }
 
-.TopTen__item:before {
-  content: counter(my-awesome-list, decimal-leading-zero);
+.TopTen__item:hover {
+  animation: pulse 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+.TopTen__item::before {
+  content: counter(top-ten-list, decimal-leading-zero);
   background: #fff;
   border: 10px solid #2c3e50;
   border-radius: 50%;
@@ -287,6 +282,18 @@ body {
   vertical-align: middle;
   width: 2.6em;
   z-index: 2;
+  box-shadow: 0 0 0 3px #ffffff;
+  animation: spinner 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s 1;
+  animation-delay: 200ms;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(-90deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
 
 .TopTen__item > span {
@@ -313,41 +320,21 @@ body {
   transform: rotate(1deg);
 }
 
-.TopTen__item:nth-child(2n)::before {
-  background: #ffffff;
-  border-color: #2c3e50;
-  box-shadow: 0 0 0 3px #ffffff;
+.TopTen__item:nth-child(5n + 1) > span {
+  background: #e8c37e;
 }
-
-.TopTen__item:nth-child(2n) > span {
+.TopTen__item:nth-child(5n + 3) > span {
   background: #2c3e50;
 }
 
-.TopTen__item:nth-child(2n + 1)::before {
-  background: #ffffff;
-  border-color: #2c3e50;
-  box-shadow: 0 0 0 3px #ffffff;
-}
-
-.TopTen__item:nth-child(2n + 1) > span {
+.TopTen__item:nth-child(5n + 2) > span {
   background: #c839a5;
 }
 
-.TopTen__item:nth-child(3n + 1)::before {
-  background: #ffffff;
-  border-color: #2c3e50;
-  box-shadow: 0 0 0 3px #ffffff;
+.TopTen__item:nth-child(5n + 4) > span {
+  background: #09ac6e;
 }
 
-.TopTen__item:nth-child(3n + 1) > span {
+.TopTen__item:nth-child(5n + 5) > span {
   background: #f663ad;
-}
-
-.TopTen__item:nth-child(4n + 1)::before {
-  background: #ffffff;
-  border-color: #2c3e50;
-  box-shadow: 0 0 0 3px #ffffff;
-}
-.TopTen__item:nth-child(4n + 1) > span {
-  background: #e8c37e;
 }
