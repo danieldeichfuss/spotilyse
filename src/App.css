@@ -365,3 +365,50 @@ body {
 .TopTen__item:nth-child(5n + 5) > span {
   background: #f663ad;
 }
+
+.Discover__list {
+  list-style-type: none;
+}
+
+.Discover__item__container {
+  text-align: center;
+  background: #2c3e50;
+  color: #ffffff;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.Discover__item {
+  width: 150px;
+  height: 150px;
+}
+
+.Discover__item__container:hover {
+  animation: pulse 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+.Discover__item:nth-child(5n + 1) .Discover__item__container {
+  background: #e8c37e;
+}
+.Discover__item:nth-child(5n + 3) .Discover__item__container {
+  background: #2c3e50;
+}
+
+.Discover__item:nth-child(5n + 2) .Discover__item__container {
+  background: #c839a5;
+}
+
+.Discover__item:nth-child(5n + 4) .Discover__item__container {
+  background: #09ac6e;
+}
+
+.Discover__item:nth-child(5n + 5) .Discover__item__container {
+  background: #f663ad;
+}

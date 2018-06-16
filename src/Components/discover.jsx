@@ -44,13 +44,13 @@ class Discover extends Component {
   render() {
     let artistsToRender = this.state.relatedArtists
       ? this.state.relatedArtists.artists.map((artist, i) => (
-          <li key={i.toString()}>
+          <li className="Discover__item" key={i.toString()}>
             <a
               onClick={() => {
                 this.getRelatedArtists(artist, this.state.accessToken);
               }}
             >
-              {artist.name}
+              <div className="Discover__item__container">{artist.name}</div>
             </a>
           </li>
         ))
@@ -65,7 +65,7 @@ class Discover extends Component {
         <p className="Discover__selected-artist">
           Selected Artist: {selectedArtist}
         </p>
-        <ul>{artistsToRender}</ul>
+        <ul className="Discover__list">{artistsToRender}</ul>
       </div>
     );
   }
