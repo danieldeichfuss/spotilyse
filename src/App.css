@@ -368,6 +368,8 @@ body {
 
 .Discover__list {
   list-style-type: none;
+  position: relative;
+  height: 100vh;
 }
 
 .Discover__item__container {
@@ -387,6 +389,12 @@ body {
 .Discover__item {
   width: 150px;
   height: 150px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .Discover__item__container:hover {

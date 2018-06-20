@@ -1,11 +1,9 @@
 import React from "react";
 
 function Graph({ relatedArtists, getRelatedArtists, accessToken }) {
-  const nodePositions = calculateNodePosition(10, { x: 0, y: 0 }, 150);
+  const nodePositions = calculateNodePosition(10, { x: 0, y: 0 }, 300);
 
   const nodesToRender = combineArrays(nodePositions, relatedArtists);
-
-  console.log(nodesToRender);
 
   let artistsToRender = nodesToRender.map((artist, i) => (
     <li
@@ -43,8 +41,6 @@ function calculateNodePosition(items_count, start, radius) {
   return result;
 }
 
-function renderNodes(points) {}
-
 function combineArrays(ar1, ar2) {
   return ar1.map((item, i) => {
     return [item, ar2[i]];
@@ -52,7 +48,3 @@ function combineArrays(ar1, ar2) {
 }
 
 export default Graph;
-
-// console.log(
-//   relatedArtists && getRelatedArtists(relatedArtists[0], accessToken)
-// );
