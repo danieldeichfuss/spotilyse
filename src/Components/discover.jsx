@@ -43,19 +43,6 @@ class Discover extends Component {
   }
 
   render() {
-    let artistsToRender = this.state.relatedArtists
-      ? this.state.relatedArtists.artists.map((artist, i) => (
-          <li className="Discover__item" key={i.toString()}>
-            <a
-              onClick={() => {
-                this.getRelatedArtists(artist, this.state.accessToken);
-              }}
-            >
-              <div className="Discover__item__container">{artist.name}</div>
-            </a>
-          </li>
-        ))
-      : "";
     let selectedArtist = this.state.selectedArtist
       ? this.state.selectedArtist.name
       : "";
@@ -66,7 +53,6 @@ class Discover extends Component {
         <p className="Discover__selected-artist">
           Selected Artist: {selectedArtist}
         </p>
-        {/* <ul className="Discover__list">{artistsToRender}</ul> */}
         {!!this.state.relatedArtists && (
           <Graph
             relatedArtists={this.state.relatedArtists.artists}
