@@ -43,22 +43,15 @@ class Discover extends Component {
   }
 
   render() {
-    let selectedArtist = this.state.selectedArtist
-      ? this.state.selectedArtist.name
-      : "";
-
     return (
       <div className="Discover">
         <h2 className="Discover__title">Discover your favourite Artists</h2>
-        <p className="Discover__selected-artist">
-          Selected Artist: {selectedArtist}
-        </p>
         {!!this.state.relatedArtists && (
           <Graph
             relatedArtists={this.state.relatedArtists.artists}
             getRelatedArtists={this.getRelatedArtists}
             accessToken={this.state.accessToken}
-            selectedArtist={selectedArtist}
+            selectedArtist={this.state.selectedArtist.name}
           />
         )}
       </div>
