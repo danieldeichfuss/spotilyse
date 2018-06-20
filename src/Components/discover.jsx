@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import queryString from "query-string";
+import Graph from "./graph";
 
 class Discover extends Component {
   constructor(props) {
@@ -65,7 +66,14 @@ class Discover extends Component {
         <p className="Discover__selected-artist">
           Selected Artist: {selectedArtist}
         </p>
-        <ul className="Discover__list">{artistsToRender}</ul>
+        {/* <ul className="Discover__list">{artistsToRender}</ul> */}
+        {!!this.state.relatedArtists && (
+          <Graph
+            relatedArtists={this.state.relatedArtists.artists}
+            getRelatedArtists={this.getRelatedArtists}
+            accessToken={this.state.accessToken}
+          />
+        )}
       </div>
     );
   }
