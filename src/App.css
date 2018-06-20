@@ -420,3 +420,7 @@ body {
 .Discover__item:nth-child(5n + 5) .Discover__item__container {
   background: #f663ad;
 }
+
+.Discover__item--selected .Discover__item__container {
+  background: #00ffdd !important;
+}

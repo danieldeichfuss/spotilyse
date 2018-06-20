@@ -1,6 +1,11 @@
 import React from "react";
 
-function Graph({ relatedArtists, getRelatedArtists, accessToken }) {
+function Graph({
+  relatedArtists,
+  getRelatedArtists,
+  accessToken,
+  selectedArtist
+}) {
   const nodePositions = calculateNodePosition(10, { x: 0, y: 0 }, 300);
 
   const nodesToRender = combineArrays(nodePositions, relatedArtists);
@@ -23,7 +28,19 @@ function Graph({ relatedArtists, getRelatedArtists, accessToken }) {
     </li>
   ));
 
-  return <ul className="Discover__list">{artistsToRender}</ul>;
+  return (
+    <ul className="Discover__list">
+      <li className="Discover__item Discover__item--selected">
+        <div className="Discover__item__container">
+          <b>
+            Selected Artist: &nbsp;
+            {selectedArtist}
+          </b>
+        </div>
+      </li>
+      {artistsToRender}
+    </ul>
+  );
 }
 
 function calculateNodePosition(items_count, start, radius) {

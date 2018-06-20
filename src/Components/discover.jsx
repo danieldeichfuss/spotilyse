@@ -58,6 +58,7 @@ class Discover extends Component {
             relatedArtists={this.state.relatedArtists.artists}
             getRelatedArtists={this.getRelatedArtists}
             accessToken={this.state.accessToken}
+            selectedArtist={selectedArtist}
           />
         )}
       </div>
