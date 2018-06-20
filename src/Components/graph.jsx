@@ -1,21 +1,29 @@
 import React from "react";
 
 function Graph({ relatedArtists, getRelatedArtists, accessToken }) {
-  console.log(relatedArtists);
+  const nodePositions = calculateNodePosition(10, { x: 0, y: 0 }, 150);
 
-  let artistsToRender = relatedArtists
-    ? relatedArtists.map((artist, i) => (
-        <li className="Discover__item" key={i.toString()}>
-          <a
-            onClick={() => {
-              getRelatedArtists(artist, accessToken);
-            }}
-          >
-            <div className="Discover__item__container">{artist.name}</div>
-          </a>
-        </li>
-      ))
-    : "";
+  const nodesToRender = combineArrays(nodePositions, relatedArtists);
+
+  console.log(nodesToRender);
+
+  let artistsToRender = nodesToRender.map((artist, i) => (
+    <li
+      className="Discover__item"
+      key={i.toString()}
+      style={{
+        transform: "translate(" + artist[0].x + "px, " + artist[0].y + "px)"
+      }}
+    >
+      <a
+        onClick={() => {
+          getRelatedArtists(artist[1], accessToken);
+        }}
+      >
+        <div className="Discover__item__container">{artist[1].name}</div>
+      </a>
+    </li>
+  ));
 
   return <ul className="Discover__list">{artistsToRender}</ul>;
 }
@@ -36,6 +44,12 @@ function calculateNodePosition(items_count, start, radius) {
 }
 
 function renderNodes(points) {}
+
+function combineArrays(ar1, ar2) {
+  return ar1.map((item, i) => {
+    return [item, ar2[i]];
+  });
+}
 
 export default Graph;
 
