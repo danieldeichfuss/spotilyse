@@ -254,6 +254,17 @@ body {
   transition: all 750ms ease-out;
 }
 
+.GraphTransition-appear {
+  opacity: 0.1;
+  transform: scale(0.1);
+}
+
+.GraphTransition-appear.GraphTransition-appear-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 750ms ease-out;
+}
+
 .Bar__value {
   align-self: center;
   padding-left: 15px;

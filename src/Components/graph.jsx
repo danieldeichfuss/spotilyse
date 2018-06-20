@@ -1,4 +1,5 @@
 import React from "react";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 function Graph({
   relatedArtists,
@@ -30,14 +31,22 @@ function Graph({
 
   return (
     <ul className="Discover__list">
-      <li className="Discover__item Discover__item--selected">
-        <div className="Discover__item__container">
-          <b>
-            Selected Artist: &nbsp;
-            {selectedArtist}
-          </b>
-        </div>
-      </li>
+      <ReactCSSTransitionGroup
+        transitionName="GraphTransition"
+        transitionAppear={true}
+        transitionAppearTimeout={1000}
+        transitionEnter={false}
+        transitionLeave={false}
+      >
+        <li className="Discover__item Discover__item--selected">
+          <div className="Discover__item__container">
+            <b>
+              Selected Artist: &nbsp;
+              {selectedArtist}
+            </b>
+          </div>
+        </li>
+      </ReactCSSTransitionGroup>
       {artistsToRender}
     </ul>
   );
