@@ -58,10 +58,6 @@ body {
   align-items: center;
 }
 
-.Login__eyes {
-  width: 100px;
-}
-
 .Login__button {
   border: 1px solid var(--font-color);
   color: var(--font-color);
@@ -460,4 +456,32 @@ body {
 
 .Discover__item--selected .Discover__item__container {
   background: var(--discover-selected-artist-color) !important;
+}
+
+/******************
+ * SVG Animations
+*******************/
+
+.eyes {
+  width: 100px;
+}
+
+.eyes .eye-dot {
+  animation: eye-balling 1.25s cubic-bezier(0.2, 0.01, 0.01, 1.46) -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+@keyframes eye-balling {
+  0% {
+    transform: scale(1);
+    transform: translateX(0);
+  }
+  30% {
+    transform: scale(1.1);
+    transform: translateX(7px);
+  }
+  100% {
+    transform: scale(1);
+    transform: translateX(0);
+  }
 }
