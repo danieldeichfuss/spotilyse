@@ -1,19 +1,19 @@
 import React from "react";
 import Bar from "./bar";
-import guitar from "../img/guitar.svg";
-import robot from "../img/robot.svg";
-import dancer from "../img/dancer-male.svg";
-import stone from "../img/stone.svg";
-import thunder from "../img/thunder.svg";
-import sunglasses from "../img/sunglasses.svg";
-import microphone from "../img/microphone.svg";
-import headphones from "../img/headphones.svg";
-import cloud from "../img/cloud.svg";
-import ear from "../img/ear.svg";
-import bunny from "../img/bunny.svg";
-import snail from "../img/snail.svg";
-import sad from "../img/sad.svg";
-import sun from "../img/sun.svg";
+import Guitar from "../img/guitar";
+import Robot from "../img/robot";
+import Dancer from "../img/dancer";
+import Stone from "../img/stone";
+import Thunder from "../img/thunder";
+import Sunglasses from "../img/sunglasses";
+import Microphone from "../img/microphone";
+import Headphones from "../img/headphones";
+import Cloud from "../img/cloud";
+import Ear from "../img/ear";
+import Bunny from "../img/bunny";
+import Snail from "../img/snail";
+import Sad from "../img/sad";
+import Sun from "../img/sun";
 
 const AudioFeature = ({ audioFeature, featureValue }) => {
   const message =
@@ -21,50 +21,51 @@ const AudioFeature = ({ audioFeature, featureValue }) => {
       ? audioFeature.messages[1]
       : audioFeature.messages[0];
   let img = null;
+  img = <Robot />;
 
   // TODO: Find a better solution
   switch (message.img) {
     case "guitar":
-      img = guitar;
+      img = <Guitar />;
       break;
     case "robot":
-      img = robot;
+      img = <Robot />;
       break;
     case "dancer":
-      img = dancer;
+      img = <Dancer />;
       break;
     case "stone":
-      img = stone;
+      img = <Stone />;
       break;
     case "thunder":
-      img = thunder;
+      img = <Thunder />;
       break;
     case "sunglasses":
-      img = sunglasses;
+      img = <Sunglasses />;
       break;
     case "microphone":
-      img = microphone;
+      img = <Microphone />;
       break;
     case "headphones":
-      img = headphones;
+      img = <Headphones />;
       break;
     case "ear":
-      img = ear;
+      img = <Ear />;
       break;
     case "cloud":
-      img = cloud;
+      img = <Cloud />;
       break;
     case "bunny":
-      img = bunny;
+      img = <Bunny />;
       break;
     case "snail":
-      img = snail;
+      img = <Snail />;
       break;
     case "sun":
-      img = sun;
+      img = <Sun />;
       break;
     case "sad":
-      img = sad;
+      img = <Sad />;
       break;
     default:
       img = null;
@@ -86,7 +87,15 @@ const AudioFeature = ({ audioFeature, featureValue }) => {
       </div>
       {audioFeature.unit === "%" && <Bar value={featureValueProcessed} />}
       <div className="AudioFeature__message">{message.text}</div>
-      <img className="AudioFeature__img" src={img} alt="emoji" />
+      <div
+        className="AudioFeature_img"
+        style={{
+          margin: "auto",
+          width: "150px"
+        }}
+      >
+        {img}
+      </div>
     </div>
   );
 };

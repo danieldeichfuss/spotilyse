@@ -206,7 +206,6 @@ body {
   justify-items: begin;
   padding: 25px 0;
   display: grid;
-  grid-template-columns: auto auto;
   grid-template-rows: repeat(3, auto);
   grid-row-gap: 10px;
   grid-column-gap: 15px;
@@ -229,7 +228,12 @@ body {
   grid-row-start: 1;
   grid-row-end: 4;
   width: 150px;
+  margin: 0 auto;
   justify-self: end;
+}
+
+.AudioFeature__img svg {
+  width: 150px;
 }
 
 .Bar {

@@ -10,7 +10,7 @@ export default () => {
       </defs>
       <g transform="matrix(1.25,0,0,-1.25,0,47.5)" id="g10">
         <g id="g12">
-          <g clip-path="url(#clipPath16)" id="g14">
+          <g clipPath="url(#clipPath16)" id="g14">
             <g transform="translate(18,19)" id="g20">
               <path
                 className="eye-ball eye-ball-left"
