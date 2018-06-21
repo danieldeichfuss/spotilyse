@@ -6,7 +6,7 @@ import dancer from "../img/dancer-male.svg";
 import stone from "../img/stone.svg";
 import thunder from "../img/thunder.svg";
 import sunglasses from "../img/sunglasses.svg";
-import mikrophone from "../img/mikrophone.svg";
+import microphone from "../img/microphone.svg";
 import headphones from "../img/headphones.svg";
 import cloud from "../img/cloud.svg";
 import ear from "../img/ear.svg";
@@ -42,8 +42,8 @@ const AudioFeature = ({ audioFeature, featureValue }) => {
     case "sunglasses":
       img = sunglasses;
       break;
-    case "mikrophone":
-      img = mikrophone;
+    case "microphone":
+      img = microphone;
       break;
     case "headphones":
       img = headphones;
