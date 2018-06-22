@@ -20,7 +20,7 @@ export default () => {
           <g clipPath="url(#clipPath16)" id="g14">
             <g transform="translate(19,37)" id="g20">
               <path
-                className="head-band"
+                className="headband"
                 id="path22"
                 style={{
                   fill: "#66757f",

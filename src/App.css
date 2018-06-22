@@ -542,3 +542,48 @@ body {
     transform: scale(1) rotate(0);
   }
 }
+
+.headphones .ear-pad,
+.headphones .headband {
+  animation: headphones 0.5s ease-in-out -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+@keyframes headphones {
+  from {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.headphones .note {
+  animation: notes 0.5s ease-in-out -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+@keyframes notes {
+  from {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: rotate(5deg);
+  }
+
+  60% {
+    transform: scale(0.9);
+  }
+
+  90% {
+    transform: rotate(-5deg);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
