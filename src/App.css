@@ -587,3 +587,18 @@ body {
     transform: scale(1);
   }
 }
+
+.thunder .body {
+  animation: thunder 0.7s -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+@keyframes thunder {
+  10% {
+    transform: scale(0) translate(0, 50px) rotate(0);
+  }
+
+  35% {
+    transform: scale(0.7) translate(0, 0) rotate(5deg);
+  }
+}
