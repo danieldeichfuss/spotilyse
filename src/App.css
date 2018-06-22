@@ -491,19 +491,27 @@ body {
 }
 
 .sad .tear {
-  animation: sad 1.25s cubic-bezier(0.2, 0.01, 0.01, 1.46) -0.4s infinite;
+  animation: sad 1.5s ease-in -0.4s infinite;
   animation-delay: 200ms;
 }
 
 @keyframes sad {
   0% {
-    transform: scale(1);
     transform: translateY(0);
     opacity: 1;
   }
-  100% {
-    transform: scale(0);
-    transform: translateY(-15px);
+
+  40% {
     opacity: 0;
+  }
+
+  60% {
+    transform: translateY(-19px);
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: translateY(-19px);
+    opacity: 0.1;
   }
 }
