@@ -707,3 +707,40 @@ body {
     transform: rotate(0);
   }
 }
+
+.robot .eye-inner {
+  animation: robot-eyes ease-in-out 0.7s -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+@keyframes robot-eyes {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.robot .headphone-band {
+  animation: robot-headphones ease-in-out 1.5s -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+@keyframes robot-headphones {
+  /* 75% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  } */
+
+  50% {
+    fill: #c839a5;
+  }
+
+  75% {
+    fill: #09ac6e;
+  }
+}

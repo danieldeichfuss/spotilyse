@@ -8,7 +8,7 @@ export default () => {
       viewBox="0 0 36 36"
     >
       <ellipse
-        className="headphone-bowl headphone-bowl-right"
+        className="headphone headphone-bowl headphone-bowl-right"
         fill="#F4900C"
         cx="33.5"
         cy="14.5"
@@ -16,7 +16,7 @@ export default () => {
         ry="3.5"
       />
       <ellipse
-        className="headphone-bowl headphone-bowl-left"
+        className="headphone headphone-bowl headphone-bowl-left"
         fill="#F4900C"
         cx="2.5"
         cy="14.5"
@@ -24,17 +24,17 @@ export default () => {
         ry="3.5"
       />
       <path
-        className="headphone-pads"
+        className="headphone headphone-pads"
         fill="#FFAC33"
         d="M34 19c0 .553-.447 1-1 1h-3c-.553 0-1-.447-1-1v-9c0-.552.447-1 1-1h3c.553 0 1 .448 1 1v9zM7 19c0 .553-.448 1-1 1H3c-.552 0-1-.447-1-1v-9c0-.552.448-1 1-1h3c.552 0 1 .448 1 1v9z"
       />
       <path
-        className="headphone-band headphone-band-top"
+        className="headphone headphone-band headphone-band-top"
         fill="#FFCC4D"
         d="M28 5c0 2.761-4.478 4-10 4C12.477 9 8 7.761 8 5s4.477-5 10-5c5.522 0 10 2.239 10 5z"
       />
       <path
-        className="headphone-band headphone-band-bottom"
+        className="headphone headphone-band headphone-band-bottom"
         fill="#F4900C"
         d="M25 4.083C25 5.694 21.865 7 18 7c-3.866 0-7-1.306-7-2.917 0-1.611 3.134-2.917 7-2.917 3.865 0 7 1.306 7 2.917z"
       />
