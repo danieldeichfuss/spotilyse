@@ -671,3 +671,39 @@ body {
     transform: rotate(-3deg);
   }
 }
+
+.dancer .arms,
+.dancer .hand {
+  animation: dancer-main ease-in-out 0.7s -0.4s infinite;
+  animation-delay: 500ms;
+}
+
+@keyframes dancer-main {
+  from {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+.dancer .shoes,
+.dancer .leg {
+  animation: dancer-shoes ease-in-out 0.7s -0.4s infinite;
+  animation-delay: 500ms;
+}
+
+@keyframes dancer-shoes {
+  from {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-1deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
