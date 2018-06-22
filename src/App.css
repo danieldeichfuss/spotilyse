@@ -477,16 +477,13 @@ body {
 
 @keyframes eye {
   0% {
-    transform: scale(1);
-    transform: translateX(0);
+    transform: scale(1) translateX(0);
   }
   30% {
-    transform: scale(1.1);
-    transform: translateX(7px);
+    transform: scale(1.1) translateX(7px);
   }
   100% {
-    transform: scale(1);
-    transform: translateX(0);
+    transform: scale(1) translateX(0);
   }
 }
 
@@ -497,21 +494,31 @@ body {
 
 @keyframes sad {
   0% {
-    transform: translateY(0);
+    transform: translate(0, 0);
     opacity: 1;
   }
 
   40% {
     opacity: 0;
-  }
-
-  60% {
-    transform: translateY(-19px);
-    opacity: 0.1;
+    transform: translate(-5px, -5px) scale(0.1);
   }
 
   100% {
-    transform: translateY(-19px);
+    transform: translateY(-19px) scale(0);
     opacity: 0.1;
   }
 }
+
+/* .cloud .cloud-top {
+  animation: cloud-top 1.5s ease-in -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+.cloud .cloud-bottom {
+  animation: cloud-bottom 1.5s ease-in -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+@keyframes cloud-top {
+
+} */
