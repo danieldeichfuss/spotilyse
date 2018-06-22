@@ -509,16 +509,36 @@ body {
   }
 }
 
-/* .cloud .cloud-top {
-  animation: cloud-top 1.5s ease-in -0.4s infinite;
+.cloud .cloud-top {
+  animation: cloud-top 1.5s ease-in-out -0.4s infinite;
   animation-delay: 200ms;
 }
 
 .cloud .cloud-bottom {
-  animation: cloud-bottom 1.5s ease-in -0.4s infinite;
+  animation: cloud-bottom 1.5s ease-in-out -0.4s infinite;
   animation-delay: 200ms;
 }
 
 @keyframes cloud-top {
+  from {
+    transform: scale(1) rotate(0);
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  to {
+    transform: scale(1) rotate(0);
+  }
+}
 
-} */
+@keyframes cloud-bottom {
+  from {
+    transform: scale(1) rotate(0);
+  }
+  60% {
+    transform: scale(0.9) rotate(-3deg);
+  }
+  to {
+    transform: scale(1) rotate(0);
+  }
+}
