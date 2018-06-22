@@ -489,3 +489,21 @@ body {
     transform: translateX(0);
   }
 }
+
+.sad .tear {
+  animation: sad 1.25s cubic-bezier(0.2, 0.01, 0.01, 1.46) -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+@keyframes sad {
+  0% {
+    transform: scale(1);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+}
