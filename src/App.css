@@ -471,11 +471,11 @@ body {
 }
 
 .eyes .eye-dot {
-  animation: eye-balling 1.25s cubic-bezier(0.2, 0.01, 0.01, 1.46) -0.4s infinite;
+  animation: eye 1.25s cubic-bezier(0.2, 0.01, 0.01, 1.46) -0.4s infinite;
   animation-delay: 200ms;
 }
 
-@keyframes eye-balling {
+@keyframes eye {
   0% {
     transform: scale(1);
     transform: translateX(0);
