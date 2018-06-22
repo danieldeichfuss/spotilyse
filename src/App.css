@@ -602,3 +602,72 @@ body {
     transform: scale(0.7) translate(0, 0) rotate(5deg);
   }
 }
+
+.bunny .tail {
+  animation: bunny-tail ease-in-out 0.7s -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+@keyframes bunny-tail {
+  10% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(-15deg);
+  }
+
+  40% {
+    transform: rotate(0);
+  }
+
+  55% {
+    transform: rotate(-7deg);
+  }
+}
+
+.bunny .nose {
+  animation: bunny-nose ease-in-out 0.7s -0.4s infinite;
+  animation-delay: 500ms;
+}
+
+@keyframes bunny-nose {
+  10% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(-20deg);
+  }
+
+  40% {
+    transform: rotate(0);
+  }
+
+  55% {
+    transform: rotate(-15deg);
+  }
+}
+
+.bunny .ear {
+  animation: bunny-ear ease-in-out 0.7s -0.4s infinite;
+  animation-delay: 500ms;
+}
+
+@keyframes bunny-ear {
+  60% {
+    transform: rotate(0);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  85% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(-3deg);
+  }
+}
