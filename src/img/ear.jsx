@@ -6,7 +6,7 @@ export default () => {
       class="body"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 47.5 47.5"
-      style="enable-background:new 0 0 47.5 47.5;"
+      style={{ enableBackground: "new 0 0 47.5 47.5" }}
       version="1.1"
       id="svg2"
     >
