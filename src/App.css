@@ -770,3 +770,48 @@ body {
     transform: scale(0.95);
   }
 }
+
+.microphone .head,
+.microphone .head-band {
+  animation: microphone ease-in-out 0.5s -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+@keyframes microphone {
+  from {
+    transform: scale(0.95) rotate(0);
+  }
+  50% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  to {
+    transform: scale(0.95);
+  }
+}
+
+.microphone .note {
+  animation: microphone-notes 0.5s ease-in-out -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+@keyframes microphone-notes {
+  from {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: rotate(5deg);
+  }
+
+  60% {
+    transform: scale(0.9);
+  }
+
+  90% {
+    transform: rotate(-5deg);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
