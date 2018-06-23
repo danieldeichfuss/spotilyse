@@ -16,6 +16,7 @@ import Sad from "../img/sad";
 import Sun from "../img/sun";
 
 const AudioFeature = ({ audioFeature, featureValue }) => {
+  // NOTE: change < to > to see all the other
   const message =
     featureValue < audioFeature.breakPoint
       ? audioFeature.messages[1]
