@@ -828,7 +828,7 @@ body {
   }
 
   50% {
-    transform: scale(0.955) translateY(1%);
+    transform: scale(0.955) translateY(2%);
   }
 
   to {
