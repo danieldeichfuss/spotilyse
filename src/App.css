@@ -728,19 +728,28 @@ body {
 }
 
 @keyframes robot-headphones {
-  /* 75% {
-    transform: scale(0.8);
-  }
-
-  100% {
-    transform: scale(1);
-  } */
-
   50% {
     fill: #c839a5;
   }
-
   75% {
     fill: #09ac6e;
+  }
+}
+
+.guitar .pickup,
+.guitar .body {
+  animation: guitar-pickup ease-in-out 0.5s -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+@keyframes guitar-pickup {
+  from {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(0.95);
   }
 }
