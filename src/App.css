@@ -815,3 +815,42 @@ body {
     transform: scale(1);
   }
 }
+
+.sun .rays,
+.sun .eye {
+  animation: sun-rays 1s ease-in-out -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+@keyframes sun-rays {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.955) translateY(1%);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.sun .mouth {
+  animation: sun-mouth 1s ease-in-out -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+@keyframes sun-mouth {
+  10% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.2);
+  }
+
+  90% {
+    transform: scale(1);
+  }
+}

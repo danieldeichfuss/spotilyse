@@ -33,7 +33,7 @@ export default () => {
             </g>
             <g transform="translate(32,18.9995)" id="g24">
               <path
-                class="body"
+                class="body head"
                 id="path26"
                 style={{
                   fill: "#ffcc4d",
@@ -46,7 +46,7 @@ export default () => {
             </g>
             <g transform="translate(19,13.5293)" id="g28">
               <path
-                class="mouth"
+                class="mouth head"
                 id="path30"
                 style={{
                   fill: "#f4900c",
@@ -59,7 +59,7 @@ export default () => {
             </g>
             <g transform="translate(27,22.3335)" id="g32">
               <path
-                class="eye eye-right"
+                class="eye eye-right head"
                 id="path34"
                 style={{
                   fill: "#f4900c",
@@ -72,7 +72,7 @@ export default () => {
             </g>
             <g transform="translate(16.3335,22.3335)" id="g36">
               <path
-                class="eye eye-left"
+                class="eye eye-left head"
                 id="path38"
                 style={{
                   fill: "#f4900c",
