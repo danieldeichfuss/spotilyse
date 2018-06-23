@@ -753,3 +753,20 @@ body {
     transform: scale(0.95);
   }
 }
+
+.sunglasses .body {
+  animation: sunglasses ease-in-out 0.5s -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+@keyframes sunglasses {
+  from {
+    transform: scale(0.95) rotate(0);
+  }
+  50% {
+    transform: scale(0.9) rotate(3deg);
+  }
+  to {
+    transform: scale(0.95);
+  }
+}
