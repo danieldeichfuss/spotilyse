@@ -72,7 +72,7 @@ export default () => {
             </g>
             <g transform="translate(25.9141,3.0625)" id="g36">
               <path
-                class="house house-inner"
+                class="house house-outer"
                 id="path38"
                 style={{
                   fill: "#ffac33",

@@ -891,3 +891,59 @@ body {
     transform: rotate(0);
   }
 }
+
+.snail .ear {
+  animation: snail-ear 1s ease-in-out -0.4s infinite;
+}
+
+@keyframes snail-ear {
+  10% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(-30deg);
+  }
+
+  90% {
+    transform: rotate(0);
+  }
+}
+
+.snail .house {
+  animation: snail-house 1s ease-in-out -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+@keyframes snail-house {
+  10% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  90% {
+    transform: rotate(0);
+  }
+}
+
+.snail .body {
+  animation: snail-body 1s ease-in-out -0.4s infinite;
+  animation-delay: 200ms;
+}
+
+@keyframes snail-body {
+  10% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  90% {
+    transform: scale(1);
+  }
+}
