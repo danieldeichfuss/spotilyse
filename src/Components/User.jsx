@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function User({ user, initExpoloration }) {
+export default function User({ user }) {
   return (
     <div className="User">
-      <img className="User__avatar" src={user.imageUrl} alt="" />
+      <img className="User__avatar" src={user.imageUrl} alt="User avatar" />
       <p className="User__intro">
         Hi {user.name},
         <br />
