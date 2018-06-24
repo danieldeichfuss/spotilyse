@@ -58,7 +58,7 @@ body {
   align-items: center;
 }
 
-.Login__button {
+.Button {
   border: 1px solid var(--font-color);
   color: var(--font-color);
   font-family: "Poppins", sans-serif;
@@ -72,7 +72,7 @@ body {
   transition-timing-function: ease-in-out;
 }
 
-.Login__button:hover {
+.Button:hover {
   color: var(--font-color-hover);
   /* TODO: change this */
   background: var(--font-color);
