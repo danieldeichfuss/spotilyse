@@ -15,14 +15,14 @@ import Snail from "../img/Snail";
 import Sad from "../img/Sad";
 import Sun from "../img/Sun";
 
-const AudioFeature = ({ audioFeature, featureValue }) => {
+export default function AudioFeature({ audioFeature, featureValue }) {
   // NOTE: change < to > to see all the other
   const message =
     featureValue < audioFeature.breakPoint
       ? audioFeature.messages[1]
       : audioFeature.messages[0];
-  let img = null;
-  img = <Robot />;
+  const featureValueProcessed = processFeatureValue(featureValue);
+  let img;
 
   // TODO: Find a better solution
   switch (message.img) {
@@ -72,13 +72,23 @@ const AudioFeature = ({ audioFeature, featureValue }) => {
       img = null;
   }
 
-  let featureValueProcessed = featureValue;
+  function processFeatureValue(featureValue) {
+    if (audioFeature.unit === "%") {
+      featureValue = convertToPercentage(featureValue);
+    }
 
-  if (audioFeature.unit === "%") {
-    featureValueProcessed = featureValue * 100;
+    featureValue = formatFeatureValue(featureValue, audioFeature.unit);
+
+    return featureValue;
   }
 
-  featureValueProcessed = Math.floor(featureValueProcessed) + audioFeature.unit;
+  function convertToPercentage(value) {
+    return value * 100;
+  }
+
+  function formatFeatureValue(value, unit) {
+    return Math.floor(value) + unit;
+  }
 
   return (
     <div className="AudioFeature">
@@ -99,6 +109,4 @@ const AudioFeature = ({ audioFeature, featureValue }) => {
       </div>
     </div>
   );
-};
-
-export default AudioFeature;
+}
