@@ -23,7 +23,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 #### Gaphics
 
-https://github.com/twitter/twemoji
-Copyright 2018 Twitter, Inc and other contributors
-Code licensed under the MIT License: http://opensource.org/licenses/MIT
+All graphics from: https://github.com/twitter/twemoji  
+Copyright 2018 Twitter, Inc and other contributors  
+Code licensed under the MIT License: http://opensource.org/licenses/MIT  
 Graphics licensed under CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/
