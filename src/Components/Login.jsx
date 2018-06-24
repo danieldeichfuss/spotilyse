@@ -1,5 +1,5 @@
 import React from "react";
-import Eyes from "../img/eyes";
+import Eyes from "../img/Eyes";
 
 export default function Login(props) {
   return (

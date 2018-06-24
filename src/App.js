@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import Header from "./Components/header";
-import Login from "./Components/login";
-import Dashboard from "./Components/dashboard";
+import Header from "./Components/Header";
+import Login from "./Components/Login";
+import Dashboard from "./Components/Dashboard";
 import queryString from "query-string";
 
 class App extends Component {

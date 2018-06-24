@@ -1,5 +1,5 @@
 import React from "react";
-import AudioFeature from "./audio-feature";
+import AudioFeature from "./AudioFeature";
 import data from "../audio-features";
 
 export default function FavouriteSong({

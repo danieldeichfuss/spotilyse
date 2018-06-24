@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import queryString from "query-string";
-import Graph from "./graph";
+import Graph from "./Graph";
 
 class Discover extends Component {
   constructor(props) {

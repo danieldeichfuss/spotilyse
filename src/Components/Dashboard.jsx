@@ -1,10 +1,10 @@
 import React from "react";
-import User from "./user";
-import FavouriteSong from "./favourite-song";
-import TopTen from "./top-ten";
-import Discover from "./discover";
-import Tabs from "./tabs";
-import Tab from "./tab";
+import User from "./User";
+import FavouriteSong from "./FavouriteSong";
+import TopTen from "./TopTen";
+import Discover from "./Discover";
+import Tabs from "./Tabs";
+import Tab from "./Tab";
 
 export default function Dashboard(props) {
   return (

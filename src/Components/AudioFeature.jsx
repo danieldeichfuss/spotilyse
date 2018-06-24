@@ -1,19 +1,19 @@
 import React from "react";
-import Bar from "./bar";
-import Guitar from "../img/guitar";
-import Robot from "../img/robot";
-import Dancer from "../img/dancer";
-import Stone from "../img/stone";
-import Thunder from "../img/thunder";
-import Sunglasses from "../img/sunglasses";
-import Microphone from "../img/microphone";
-import Headphones from "../img/headphones";
-import Cloud from "../img/cloud";
-import Ear from "../img/ear";
-import Bunny from "../img/bunny";
-import Snail from "../img/snail";
-import Sad from "../img/sad";
-import Sun from "../img/sun";
+import Bar from "./Bar";
+import Guitar from "../img/Guitar";
+import Robot from "../img/Robot";
+import Dancer from "../img/Dancer";
+import Stone from "../img/Stone";
+import Thunder from "../img/Thunder";
+import Sunglasses from "../img/Sunglasses";
+import Microphone from "../img/Microphone";
+import Headphones from "../img/Headphones";
+import Cloud from "../img/Cloud";
+import Ear from "../img/Ear";
+import Bunny from "../img/Bunny";
+import Snail from "../img/Snail";
+import Sad from "../img/Sad";
+import Sun from "../img/Sun";
 
 const AudioFeature = ({ audioFeature, featureValue }) => {
   // NOTE: change < to > to see all the other
