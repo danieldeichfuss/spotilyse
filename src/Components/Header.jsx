@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header(props) {
+function Header() {
   return (
     <header className="Header">
       <h1 className="Header__title">Spotilyse</h1>
