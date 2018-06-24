@@ -6,26 +6,32 @@ import Discover from "./Discover";
 import Tabs from "./Tabs";
 import Tab from "./Tab";
 
-export default function Dashboard(props) {
+export default function Dashboard({
+  user,
+  tracks,
+  artists,
+  favouriteTrack,
+  favouriteTrackFeatures
+}) {
   return (
     <div className="Dashboard">
       <Tabs>
         <Tab tabName="User">
-          <User user={props.user} />
+          <User user={user} />
         </Tab>
         <Tab tabName="Favourite Song">
           <FavouriteSong
-            favouriteSong={props.tracks[0]}
-            favouriteArtist={props.artists[0]}
-            favouriteTrack={props.favouriteTrack}
-            favouriteTrackFeatures={props.favouriteTrackFeatures}
+            favouriteSong={tracks[0]}
+            favouriteArtist={artists[0]}
+            favouriteTrack={favouriteTrack}
+            favouriteTrackFeatures={favouriteTrackFeatures}
           />
         </Tab>
         <Tab tabName="Top ten">
-          <TopTen tracks={props.tracks} artists={props.artists} />
+          <TopTen tracks={tracks} artists={artists} />
         </Tab>
         <Tab tabName="Discover">
-          <Discover favouriteArtist={props.artists[0]} />
+          <Discover favouriteArtist={artists[0]} />
         </Tab>
       </Tabs>
     </div>
