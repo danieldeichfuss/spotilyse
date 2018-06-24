@@ -11,7 +11,10 @@ export default function Dashboard({
   tracks,
   artists,
   favouriteTrack,
-  favouriteTrackFeatures
+  favouriteTrackFeatures,
+  relatedArtists,
+  getRelatedArtists,
+  selectedArtist
 }) {
   return (
     <div className="Dashboard">
@@ -31,7 +34,12 @@ export default function Dashboard({
           <TopTen tracks={tracks} artists={artists} />
         </Tab>
         <Tab tabName="Discover">
-          <Discover favouriteArtist={artists[0]} />
+          <Discover
+            favouriteArtist={artists[0]}
+            getRelatedArtists={getRelatedArtists}
+            relatedArtists={relatedArtists}
+            selectedArtist={selectedArtist}
+          />
         </Tab>
       </Tabs>
     </div>

@@ -9,17 +9,18 @@ class App extends Component {
   constructor() {
     super();
     this.state = { isLoading: false, isLoggedIn: false };
+    this.getRelatedArtists = this.getRelatedArtists.bind(this);
   }
   componentDidMount() {
     let parsed = queryString.parse(window.location.search);
-    let accessToken = parsed.access_token;
+    this.accessToken = parsed.access_token;
     this.setState({ isLoading: true });
-    accessToken && this.setState({ isLoggedIn: true });
+    this.accessToken && this.setState({ isLoggedIn: true });
 
-    if (!accessToken) return;
+    if (!this.accessToken) return;
     // Get user
     const userPromise = fetch("https://api.spotify.com/v1/me", {
-      headers: { Authorization: "Bearer " + accessToken }
+      headers: { Authorization: "Bearer " + this.accessToken }
     })
       .then(response => response.json())
       .then(data =>
@@ -36,21 +37,36 @@ class App extends Component {
     const topArtistsPromise = fetch(
       "https://api.spotify.com/v1/me/top/artists?limit=10",
       {
-        headers: { Authorization: "Bearer " + accessToken }
+        headers: { Authorization: "Bearer " + this.accessToken }
       }
     )
       .then(response => response.json())
-      .then(data =>
+      .then(data => {
         this.setState({
-          artists: data.items
-        })
-      );
+          artists: data.items,
+          selectedArtist: data.items[0]
+        });
+        fetch(
+          "https://api.spotify.com/v1/artists/" +
+            data.items[0].id +
+            "/related-artists",
+          {
+            headers: { Authorization: "Bearer " + this.accessToken }
+          }
+        )
+          .then(response => response.json())
+          .then(data =>
+            this.setState({
+              relatedArtists: data
+            })
+          );
+      });
 
     // Get Top Tracks
     const topTracksPromise = fetch(
       "https://api.spotify.com/v1/me/top/tracks?limit=10",
       {
-        headers: { Authorization: "Bearer " + accessToken }
+        headers: { Authorization: "Bearer " + this.accessToken }
       }
     )
       .then(response => response.json())
@@ -60,7 +76,7 @@ class App extends Component {
         });
         // Get Favourite Track
         fetch(data.items[0].href, {
-          headers: { Authorization: "Bearer " + accessToken }
+          headers: { Authorization: "Bearer " + this.accessToken }
         })
           .then(response => response.json())
           .then(data =>
@@ -70,7 +86,7 @@ class App extends Component {
           );
         // Get Favourite Track Audio Features
         fetch("https://api.spotify.com/v1/audio-features/" + data.items[0].id, {
-          headers: { Authorization: "Bearer " + accessToken }
+          headers: { Authorization: "Bearer " + this.accessToken }
         })
           .then(response => response.json())
           .then(data =>
@@ -127,6 +143,9 @@ class App extends Component {
             artists={this.state.artists}
             favouriteTrack={this.state.favouriteTrack}
             favouriteTrackFeatures={this.state.favouriteTrackFeatures}
+            selectedArtist={this.state.selectedArtist}
+            relatedArtists={this.state.relatedArtists}
+            getRelatedArtists={this.getRelatedArtists}
           />
         </div>
       );
@@ -137,6 +156,22 @@ class App extends Component {
     (window.location = window.location.href.includes("localhost")
       ? "http://localhost:8888/login"
       : "http://spotilyse-backend.herokuapp.com/login");
+
+  getRelatedArtists(artist) {
+    fetch(
+      "https://api.spotify.com/v1/artists/" + artist.id + "/related-artists",
+      {
+        headers: { Authorization: "Bearer " + this.accessToken }
+      }
+    )
+      .then(response => response.json())
+      .then(data =>
+        this.setState({
+          relatedArtists: data,
+          selectedArtist: artist
+        })
+      );
+  }
 }
 
 export default App;

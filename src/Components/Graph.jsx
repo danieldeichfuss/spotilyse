@@ -1,12 +1,7 @@
 import React from "react";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
-function Graph({
-  relatedArtists,
-  getRelatedArtists,
-  accessToken,
-  selectedArtist
-}) {
+function Graph({ relatedArtists, getRelatedArtists, selectedArtist }) {
   const nodePositions = calculateNodePosition(10, { x: 0, y: 0 }, 300);
 
   const nodesToRender = combineArrays(nodePositions, relatedArtists);
@@ -21,7 +16,7 @@ function Graph({
     >
       <a
         onClick={() => {
-          getRelatedArtists(artist[1], accessToken);
+          getRelatedArtists(artist[1]);
         }}
       >
         <div className="Discover__item__container">{artist[1].name}</div>
@@ -42,7 +37,7 @@ function Graph({
           <div className="Discover__item__container">
             <b>
               Selected Artist: &nbsp;
-              {selectedArtist}
+              {selectedArtist.name}
             </b>
           </div>
         </li>
@@ -53,7 +48,7 @@ function Graph({
 }
 
 function calculateNodePosition(items_count, start, radius) {
-  const step = 2 * Math.PI / items_count;
+  const step = (2 * Math.PI) / items_count;
   let angle = 0;
   let result = [];
 
