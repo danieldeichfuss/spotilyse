@@ -1,7 +1,7 @@
 import React from "react";
 import mojs from "mo-js";
 
-const Tab = props => {
+export default function Tab({ isActive, tabName, tabIndex, onClick }) {
   const shootLines = e => {
     const itemDim = e.currentTarget.getBoundingClientRect(),
       itemSize = {
@@ -42,16 +42,14 @@ const Tab = props => {
   return (
     <li className="Tab" onClick={shootLines}>
       <a
-        className={`Tab__link ${props.isActive ? "active" : ""}`}
+        className={`Tab__link ${isActive ? "active" : ""}`}
         onClick={event => {
           event.preventDefault();
-          props.onClick(props.tabIndex);
+          onClick(tabIndex);
         }}
       >
-        {props.tabName}
+        {tabName}
       </a>
     </li>
   );
-};
-
-export default Tab;
+}
