@@ -3,9 +3,7 @@ import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 function Graph({ relatedArtists, getRelatedArtists, selectedArtist }) {
   const nodePositions = calculateNodePosition(10, { x: 0, y: 0 }, 300);
-
   const nodesToRender = combineArrays(nodePositions, relatedArtists);
-
   let artistsToRender = nodesToRender.map((artist, i) => (
     <li
       className="Discover__item"
