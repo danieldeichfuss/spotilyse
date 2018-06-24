@@ -21,7 +21,10 @@ export default function AudioFeature({ audioFeature, featureValue }) {
     featureValue < audioFeature.breakPoint
       ? audioFeature.messages[1]
       : audioFeature.messages[0];
-  const featureValueProcessed = processFeatureValue(featureValue);
+  const featureValueProcessed = processFeatureValue(
+    featureValue,
+    audioFeature.unit
+  );
   let img;
 
   // TODO: Find a better solution
@@ -72,24 +75,6 @@ export default function AudioFeature({ audioFeature, featureValue }) {
       img = null;
   }
 
-  function processFeatureValue(featureValue) {
-    if (audioFeature.unit === "%") {
-      featureValue = convertToPercentage(featureValue);
-    }
-
-    featureValue = formatFeatureValue(featureValue, audioFeature.unit);
-
-    return featureValue;
-  }
-
-  function convertToPercentage(value) {
-    return value * 100;
-  }
-
-  function formatFeatureValue(value, unit) {
-    return Math.floor(value) + unit;
-  }
-
   return (
     <div className="AudioFeature">
       <div className="AudioFeature__intro-wrapper">
@@ -109,4 +94,22 @@ export default function AudioFeature({ audioFeature, featureValue }) {
       </div>
     </div>
   );
+}
+
+function processFeatureValue(value, unit) {
+  if (unit === "%") {
+    value = convertToPercentage(value);
+  }
+
+  value = formatFeatureValue(value, unit);
+
+  return value;
+}
+
+function convertToPercentage(value) {
+  return value * 100;
+}
+
+function formatFeatureValue(value, unit) {
+  return Math.floor(value) + unit;
 }

@@ -8,16 +8,13 @@ export default function FavouriteSong({
   favouriteTrackFeatures
 }) {
   const audioFeaturesToRender = data.audioFeatures.map(
-    (audioFeature, index) => {
-      const value = favouriteTrackFeatures[audioFeature.name];
-      return (
-        <AudioFeature
-          audioFeature={data.audioFeatures[index]}
-          featureValue={value}
-          key={audioFeature.name}
-        />
-      );
-    }
+    (audioFeature, index) => (
+      <AudioFeature
+        audioFeature={data.audioFeatures[index]}
+        featureValue={favouriteTrackFeatures[audioFeature.name]}
+        key={audioFeature.name}
+      />
+    )
   );
 
   return (
@@ -26,11 +23,10 @@ export default function FavouriteSong({
         What your favourite songs say about you?
       </h2>
       <div className="FavouriteSong__song">
-        <b>Your favourite song is:</b> {favouriteSong && favouriteSong.name}
+        <b>Your favourite song is:</b> {favouriteSong}
       </div>
       <div className="FavouriteSong__artist">
-        <b>Your favourite artist is:</b>{" "}
-        {favouriteArtist && favouriteArtist.name}
+        <b>Your favourite artist is:</b> {favouriteArtist}
       </div>
       <div className="AudioFeatures">{audioFeaturesToRender}</div>
     </div>

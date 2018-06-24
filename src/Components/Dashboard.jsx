@@ -21,8 +21,8 @@ export default function Dashboard({
         </Tab>
         <Tab tabName="Favourite Song">
           <FavouriteSong
-            favouriteSong={tracks[0]}
-            favouriteArtist={artists[0]}
+            favouriteSong={tracks[0].name}
+            favouriteArtist={artists[0].name}
             favouriteTrack={favouriteTrack}
             favouriteTrackFeatures={favouriteTrackFeatures}
           />
