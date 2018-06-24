@@ -1,6 +1,6 @@
 import React from "react";
 
-export default () => {
+export default function Robot() {
   return (
     <svg
       className="robot"
@@ -89,4 +89,4 @@ export default () => {
       />
     </svg>
   );
-};
+}

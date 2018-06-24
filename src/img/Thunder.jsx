@@ -1,6 +1,6 @@
 import React from "react";
 
-export default () => {
+export default function Thunder() {
   return (
     <svg
       className="thunder"
@@ -14,4 +14,4 @@ export default () => {
       />
     </svg>
   );
-};
+}

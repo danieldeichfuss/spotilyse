@@ -1,6 +1,6 @@
 import React from "react";
 
-export default () => {
+export default function Dancer() {
   return (
     <svg
       className="dancer"
@@ -66,4 +66,4 @@ export default () => {
       />
     </svg>
   );
-};
+}

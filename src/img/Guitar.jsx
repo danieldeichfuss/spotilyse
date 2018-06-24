@@ -1,6 +1,6 @@
 import React from "react";
 
-export default () => {
+export default function Guitar() {
   return (
     <svg
       class="guitar"
@@ -101,4 +101,4 @@ export default () => {
       </g>
     </svg>
   );
-};
+}

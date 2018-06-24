@@ -1,6 +1,6 @@
 import React from "react";
 
-export default () => {
+export default function Cloud() {
   return (
     <svg
       className="cloud"
@@ -19,4 +19,4 @@ export default () => {
       />
     </svg>
   );
-};
+}

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default () => {
+export default function Eyes() {
   return (
     <svg className="eyes" viewBox="0 0 47.5 47.5" id="svg2">
       <defs id="defs6">
@@ -68,4 +68,4 @@ export default () => {
       </g>
     </svg>
   );
-};
+}
