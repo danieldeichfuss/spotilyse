@@ -310,7 +310,7 @@ body {
   text-decoration: underline;
 }
 
-.TopTen__list {
+.List {
   counter-reset: top-ten-list;
   display: inline-block;
   margin-left: -3.4em;
@@ -319,7 +319,7 @@ body {
   list-style-type: none;
 }
 
-.TopTen__item {
+.List__item {
   counter-increment: top-ten-list;
   margin: 1em 0;
   position: relative;
@@ -327,12 +327,12 @@ body {
   color: var(--topten-item-font-color);
 }
 
-.TopTen__item:hover {
+.List__item:hover {
   animation: pulse 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
   animation-delay: 200ms;
 }
 
-.TopTen__item::before {
+.List__item::before {
   content: counter(top-ten-list, decimal-leading-zero);
   background: var(--topten-icon-background);
   border: 10px solid var(--topten-icon-border);
@@ -361,7 +361,7 @@ body {
   }
 }
 
-.TopTen__item > span {
+.List__item > span {
   border-radius: 4px;
   display: inline-block;
   position: relative;
@@ -371,7 +371,7 @@ body {
   vertical-align: middle;
 }
 
-.TopTen__item > span::after {
+.List__item > span::after {
   background: transparent;
   content: "";
   position: absolute;
@@ -385,22 +385,22 @@ body {
   transform: rotate(1deg);
 }
 
-.TopTen__item:nth-child(5n + 1) > span {
+.List__item:nth-child(5n + 1) > span {
   background: var(--theme-color-1);
 }
-.TopTen__item:nth-child(5n + 3) > span {
+.List__item:nth-child(5n + 3) > span {
   background: var(--theme-color-2);
 }
 
-.TopTen__item:nth-child(5n + 2) > span {
+.List__item:nth-child(5n + 2) > span {
   background: var(--theme-color-3);
 }
 
-.TopTen__item:nth-child(5n + 4) > span {
+.List__item:nth-child(5n + 4) > span {
   background: var(--theme-color-4);
 }
 
-.TopTen__item:nth-child(5n + 5) > span {
+.List__item:nth-child(5n + 5) > span {
   background: var(--theme-color-5);
 }
 
