@@ -964,4 +964,18 @@ body {
     grid-row-gap: 25px;
     text-align: center;
   }
+
+  .List {
+    margin: auto;
+    padding: 0 5%;
+  }
+
+  .List__item span {
+    margin: 25px auto;
+    width: 75%;
+  }
+
+  .List__item::before {
+    left: calc(50% - 2em);
+  }
 }
