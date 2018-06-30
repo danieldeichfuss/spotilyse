@@ -947,3 +947,10 @@ body {
     transform: scale(1);
   }
 }
+
+@media (max-width: 570px) {
+  .Tab {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
