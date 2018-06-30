@@ -953,4 +953,15 @@ body {
     display: block;
     margin-bottom: 5px;
   }
+
+  .AudioFeatures {
+    grid-template-columns: 100%;
+    grid-column-gap: 0;
+    grid-row-gap: 75px;
+  }
+
+  .AudioFeature {
+    grid-row-gap: 25px;
+    text-align: center;
+  }
 }
