@@ -117,7 +117,6 @@ class App extends Component {
       return (
         <div className="App">
           <Header />
-          {/* TODO: extract component spinner */}
           <div className="Spinner">...Loading</div>
         </div>
       );
