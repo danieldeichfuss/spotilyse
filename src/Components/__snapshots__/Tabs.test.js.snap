@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders page correctly 1`] = `
+<div
+  className="Tabs"
+>
+  <ul
+    className="Tabs__list"
+  >
+    <li
+      className="Tab"
+      onClick={[Function]}
+    >
+      <a
+        className="Tab__link active"
+        onClick={[Function]}
+      />
+    </li>
+  </ul>
+  <div
+    className="Tabs__active-content"
+  />
+</div>
+`;

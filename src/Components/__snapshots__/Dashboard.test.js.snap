@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders page correctly 1`] = `
+<div
+  className="Dashboard"
+>
+  <div
+    className="Tabs"
+  >
+    <ul
+      className="Tabs__list"
+    >
+      <li
+        className="Tab"
+        onClick={[Function]}
+      >
+        <a
+          className="Tab__link active"
+          onClick={[Function]}
+        >
+          User
+        </a>
+      </li>
+      <li
+        className="Tab"
+        onClick={[Function]}
+      >
+        <a
+          className="Tab__link "
+          onClick={[Function]}
+        >
+          Favourite Song
+        </a>
+      </li>
+      <li
+        className="Tab"
+        onClick={[Function]}
+      >
+        <a
+          className="Tab__link "
+          onClick={[Function]}
+        >
+          Top ten
+        </a>
+      </li>
+      <li
+        className="Tab"
+        onClick={[Function]}
+      >
+        <a
+          className="Tab__link "
+          onClick={[Function]}
+        >
+          Discover
+        </a>
+      </li>
+    </ul>
+    <div
+      className="Tabs__active-content"
+    >
+      <div
+        className="User"
+      >
+        <img
+          alt="User avatar"
+          className="User__avatar"
+          src={undefined}
+        />
+        <p
+          className="User__intro"
+        >
+          Hi 
+          ,
+          <br />
+          welcome to Spotilyse! Here you can expolore your musical personality and discover your favourite artists.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

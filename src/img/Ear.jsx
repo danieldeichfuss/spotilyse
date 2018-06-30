@@ -3,7 +3,7 @@ import React from "react";
 export default function Ear() {
   return (
     <svg
-      class="ear"
+      className="ear"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 47.5 47.5"
       style={{ enableBackground: "new 0 0 47.5 47.5" }}
@@ -17,10 +17,10 @@ export default function Ear() {
       </defs>
       <g transform="matrix(1.25,0,0,-1.25,0,47.5)" id="g10">
         <g id="g12">
-          <g clip-path="url(#clipPath16)" id="g14">
+          <g clipPath="url(#clipPath16)" id="g14">
             <g transform="translate(32,23)" id="g20">
               <path
-                class="body"
+                className="body"
                 id="path22"
                 style={{
                   fill: "#d99e82",
@@ -33,7 +33,7 @@ export default function Ear() {
             </g>
             <g transform="translate(24.999,15)" id="g24">
               <path
-                class="lines lines-top"
+                className="lines lines-top"
                 id="path26"
                 style={{
                   fill: "#c1694f",
@@ -46,7 +46,7 @@ export default function Ear() {
             </g>
             <g transform="translate(12.5845,10.083)" id="g28">
               <path
-                class="lines lines-bottom"
+                className="lines lines-bottom"
                 id="path30"
                 style={{
                   fill: "#c1694f",

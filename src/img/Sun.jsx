@@ -3,7 +3,7 @@ import React from "react";
 export default function Sun() {
   return (
     <svg
-      class="sun"
+      className="sun"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 47.5 47.5"
       style={{ enableBackground: "new 0 0 47.5 47.5" }}
@@ -17,10 +17,10 @@ export default function Sun() {
       </defs>
       <g transform="matrix(1.25,0,0,-1.25,0,47.5)" id="g10">
         <g id="g12">
-          <g clip-path="url(#clipPath16)" id="g14">
+          <g clipPath="url(#clipPath16)" id="g14">
             <g transform="translate(19,1.2002)" id="g20">
               <path
-                class="rays"
+                className="rays"
                 id="path22"
                 style={{
                   fill: "#f4900c",
@@ -33,7 +33,7 @@ export default function Sun() {
             </g>
             <g transform="translate(32,18.9995)" id="g24">
               <path
-                class="body head"
+                className="body head"
                 id="path26"
                 style={{
                   fill: "#ffcc4d",
@@ -46,7 +46,7 @@ export default function Sun() {
             </g>
             <g transform="translate(19,13.5293)" id="g28">
               <path
-                class="mouth head"
+                className="mouth head"
                 id="path30"
                 style={{
                   fill: "#f4900c",
@@ -59,7 +59,7 @@ export default function Sun() {
             </g>
             <g transform="translate(27,22.3335)" id="g32">
               <path
-                class="eye eye-right head"
+                className="eye eye-right head"
                 id="path34"
                 style={{
                   fill: "#f4900c",
@@ -72,7 +72,7 @@ export default function Sun() {
             </g>
             <g transform="translate(16.3335,22.3335)" id="g36">
               <path
-                class="eye eye-left head"
+                className="eye eye-left head"
                 id="path38"
                 style={{
                   fill: "#f4900c",

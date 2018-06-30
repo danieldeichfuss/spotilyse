@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders page correctly 1`] = `
+<div
+  className="User"
+>
+  <img
+    alt="User avatar"
+    className="User__avatar"
+    src={undefined}
+  />
+  <p
+    className="User__intro"
+  >
+    Hi 
+    Name
+    ,
+    <br />
+    welcome to Spotilyse! Here you can expolore your musical personality and discover your favourite artists.
+  </p>
+</div>
+`;
