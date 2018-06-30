@@ -104,16 +104,6 @@ class App extends Component {
   }
 
   render() {
-    // TODO: für später
-    // let topTracksToRender =
-    //   this.state.serverData.user && this.state.serverData.user.tracks
-    //     ? this.state.serverData.user.tracks.filter(playlist =>
-    //         playlist.name
-    //           .toLowerCase()
-    //           .includes(this.state.filterString.toLowerCase())
-    //       )
-    //     : [];
-
     if (!this.state.isLoggedIn) {
       return (
         <div className="App">
