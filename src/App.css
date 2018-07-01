@@ -37,7 +37,8 @@ body {
 }
 
 .Header__logo {
-  margin: 0 10%;
+  margin: 50px 10% 0 10%;
+  width: 80%;
   max-width: 750px;
 }
 
