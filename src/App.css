@@ -949,6 +949,74 @@ body {
   }
 }
 
+.Logo__curl-top {
+  animation: curl-top 3.5s ease-in-out infinite;
+  transform-origin: 150px 150px;
+}
+
+@keyframes curl-top {
+  from {
+    transform: rotate(0);
+  }
+
+  30% {
+    transform: rotate(-362deg);
+  }
+
+  60% {
+    transform: rotate(0);
+  }
+}
+
+.Logo__curl-bottom {
+  animation: curl-top 2.5s ease-in-out infinite;
+  transform-origin: 150px 150px;
+}
+
+@keyframes curl-top {
+  from {
+    transform: rotate(0);
+  }
+
+  30% {
+    transform: rotate(-180deg);
+  }
+
+  60% {
+    transform: rotate(0);
+  }
+}
+
+.Logo__donut-outer {
+  animation: donut-outer 2.5s ease-in-out infinite;
+  transform-origin: 505px 193px;
+}
+
+@keyframes donut-outer {
+  from {
+    transform: scale(1);
+  }
+
+  80% {
+    transform: scale(0.3);
+  }
+}
+
+.Logo__donut-inner {
+  animation: donut-inner 3.5s ease-in-out infinite;
+  transform-origin: 500px 190px;
+}
+
+@keyframes donut-inner {
+  from {
+    transform: scale(0.3);
+  }
+
+  80% {
+    transform: scale(3);
+  }
+}
+
 @media (max-width: 570px) {
   .Tab {
     display: block;
