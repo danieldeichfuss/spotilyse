@@ -1,26 +1,17 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import AudioFeature from "./AudioFeature";
-import renderer from "react-test-renderer";
+import * as Enzyme from "enzyme";
+import ReactSixteenAdapter from "enzyme-adapter-react-16";
+Enzyme.configure({ adapter: new ReactSixteenAdapter() });
 
 const audioFeature = {
   messages: ["Message 1", "Message 2"]
 };
 const featureValue = 0.5;
-
-it("renders without crashing", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(
-    <AudioFeature audioFeature={audioFeature} featureValue={featureValue} />,
-    div
-  );
-  ReactDOM.unmountComponentAtNode(div);
-});
+const wrapper = Enzyme.shallow(
+  <AudioFeature audioFeature={audioFeature} featureValue={featureValue} />
+);
 
 it("renders page correctly", () => {
-  const component = renderer.create(
-    <AudioFeature audioFeature={audioFeature} featureValue={featureValue} />
-  );
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(wrapper).toMatchSnapshot();
 });

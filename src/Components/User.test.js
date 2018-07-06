@@ -1,20 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import User from "./User";
-import renderer from "react-test-renderer";
+import * as Enzyme from "enzyme";
+import ReactSixteenAdapter from "enzyme-adapter-react-16";
+Enzyme.configure({ adapter: new ReactSixteenAdapter() });
 
 const user = {
   name: "Name",
   imgUrl: "img-rul"
 };
-it("renders without crashing", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(<User user={user} />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
-
+const wrapper = Enzyme.shallow(<User user={user} />);
 it("renders page correctly", () => {
-  const component = renderer.create(<User user={user} />);
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(wrapper).toMatchSnapshot();
 });
