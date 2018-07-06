@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import TopTen from "./TopTen";
 import * as Enzyme from "enzyme";
 import ReactSixteenAdapter from "enzyme-adapter-react-16";
