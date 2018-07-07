@@ -1,31 +1,35 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Graph from "./Graph";
-import renderer from "react-test-renderer";
+import { shallow, configure } from "enzyme";
+import ReactSixteenAdapter from "enzyme-adapter-react-16";
+import { shallowToJson } from "enzyme-to-json";
 
-// const relatedArtists = [
-//   [
-//     { x: 0, y: 0 },
-//     {
-//       name: "Artist 1"
-//     }
-//   ],
-//   [
-//     { x: 0, y: 0 },
-//     {
-//       name: "Artist 2"
-//     }
-//   ]
-// ];
+configure({ adapter: new ReactSixteenAdapter() });
+const relatedArtists = [
+  {
+    name: "Artist 1"
+  },
+  {
+    name: "Artist 2"
+  },
+  {
+    name: "Artist 3"
+  }
+];
+const getRelatedArtists = jest.fn();
+const selectedArtist = "Selected Artist";
+console.log(relatedArtists);
 
-it("renders without crashing", () => {
-  const div = document.createElement("div");
-  // ReactDOM.render(<Graph />, div);
-  // ReactDOM.unmountComponentAtNode(div);
+debugger;
+const wrapper = shallow(
+  <Graph
+    relatedArtists={relatedArtists}
+    getRelatedArtists={getRelatedArtists}
+    selectedArtist={selectedArtist}
+  />
+);
+it("renders page correctly", () => {
+  expect(shallowToJson(wrapper)).toMatchSnapshot();
 });
 
-// it("renders page correctly", () => {
-//   const component = renderer.create(<Graph relatedArtists={relatedArtists} />);
-//   let tree = component.toJSON();
-//   expect(tree).toMatchSnapshot();
-// });
+it("renders page correctly");

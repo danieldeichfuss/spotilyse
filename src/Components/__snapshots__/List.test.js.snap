@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders page correctly 1`] = `
+<CSSTransitionGroup
+  transitionAppear={true}
+  transitionAppearTimeout={1000}
+  transitionEnter={false}
+  transitionLeave={false}
+  transitionName="AppearTransition"
+>
+  <ol
+    className="List"
+  />
+</CSSTransitionGroup>
+`;

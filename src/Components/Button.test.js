@@ -1,19 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Button from "./Button";
-import renderer from "react-test-renderer";
+import { shallow, configure } from "enzyme";
+import { shallowToJson } from "enzyme-to-json";
+import ReactSixteenAdapter from "enzyme-adapter-react-16";
 
+configure({ adapter: new ReactSixteenAdapter() });
 const text = "Button Text";
-const callback = jest.fn();
-
-it("renders without crashing", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(<Button text={text} />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+const wrapper = shallow(<Button text={text} />);
 
 it("renders page correctly", () => {
-  const component = renderer.create(<Button text={text} callback={callback} />);
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(shallowToJson(wrapper)).toMatchSnapshot();
 });

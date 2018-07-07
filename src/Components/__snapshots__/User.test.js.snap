@@ -1,178 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders page correctly 1`] = `
-ShallowWrapper {
-  "length": 1,
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <User
-    user={
-        Object {
-            "imgUrl": "img-rul",
-            "name": "Name",
-          }
-    }
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <img
-          alt="User avatar"
-          className="User__avatar"
-          src={undefined}
-/>,
-        <p
-          className="User__intro"
+<div
+  className="User"
 >
-          Hi 
-          Name
-          ,
-          <br />
-          welcome to Spotilyse! Here you can expolore your musical personality and discover your favourite artists.
-</p>,
-      ],
-      "className": "User",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "alt": "User avatar",
-          "className": "User__avatar",
-          "src": undefined,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "img",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "Hi ",
-            "Name",
-            ",",
-            <br />,
-            "welcome to Spotilyse! Here you can expolore your musical personality and discover your favourite artists.",
-          ],
-          "className": "User__intro",
-        },
-        "ref": null,
-        "rendered": Array [
-          "Hi ",
-          "Name",
-          ",",
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {},
-            "ref": null,
-            "rendered": null,
-            "type": "br",
-          },
-          "welcome to Spotilyse! Here you can expolore your musical personality and discover your favourite artists.",
-        ],
-        "type": "p",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <img
-            alt="User avatar"
-            className="User__avatar"
-            src={undefined}
-/>,
-          <p
-            className="User__intro"
->
-            Hi 
-            Name
-            ,
-            <br />
-            welcome to Spotilyse! Here you can expolore your musical personality and discover your favourite artists.
-</p>,
-        ],
-        "className": "User",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "alt": "User avatar",
-            "className": "User__avatar",
-            "src": undefined,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "img",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              "Hi ",
-              "Name",
-              ",",
-              <br />,
-              "welcome to Spotilyse! Here you can expolore your musical personality and discover your favourite artists.",
-            ],
-            "className": "User__intro",
-          },
-          "ref": null,
-          "rendered": Array [
-            "Hi ",
-            "Name",
-            ",",
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {},
-              "ref": null,
-              "rendered": null,
-              "type": "br",
-            },
-            "welcome to Spotilyse! Here you can expolore your musical personality and discover your favourite artists.",
-          ],
-          "type": "p",
-        },
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-      },
-    },
-  },
-}
+  <img
+    alt="User avatar"
+    className="User__avatar"
+  />
+  <p
+    className="User__intro"
+  >
+    Hi 
+    Name
+    ,
+    <br />
+    welcome to Spotilyse! Here you can expolore your musical personality and discover your favourite artists.
+  </p>
+</div>
 `;

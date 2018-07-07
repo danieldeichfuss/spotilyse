@@ -1,16 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Tab from "./Tab";
-import renderer from "react-test-renderer";
+import { shallow, configure } from "enzyme";
+import { shallowToJson } from "enzyme-to-json";
+import ReactSixteenAdapter from "enzyme-adapter-react-16";
 
-it("renders without crashing", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(<Tab />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
-
+configure({ adapter: new ReactSixteenAdapter() });
+const wrapper = shallow(<Tab />);
 it("renders page correctly", () => {
-  const component = renderer.create(<Tab />);
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(shallowToJson(wrapper)).toMatchSnapshot();
 });

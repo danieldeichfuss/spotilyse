@@ -1,16 +1,12 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Login from "./Login";
-import renderer from "react-test-renderer";
+import { shallow, configure } from "enzyme";
+import ReactSixteenAdapter from "enzyme-adapter-react-16";
+import { shallowToJson } from "enzyme-to-json";
 
-it("renders without crashing", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(<Login />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+configure({ adapter: new ReactSixteenAdapter() });
 
-it("renders page correctly", () => {
-  const component = renderer.create(<Login />);
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+const wrapper = shallow(<Login />);
+it("renders component correctly", () => {
+  expect(shallowToJson(wrapper)).toMatchSnapshot();
 });

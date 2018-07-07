@@ -1,26 +1,19 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Tabs from "./Tabs";
 import Tab from "./Tab";
-import renderer from "react-test-renderer";
+import { shallow, configure } from "enzyme";
+import { shallowToJson } from "enzyme-to-json";
+import ReactSixteenAdapter from "enzyme-adapter-react-16";
 
-it("renders without crashing", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(
-    <Tabs>
-      <Tab>TEST</Tab>
-    </Tabs>,
-    div
-  );
-  ReactDOM.unmountComponentAtNode(div);
-});
+configure({ adapter: new ReactSixteenAdapter() });
+const wrapper = shallow(
+  <Tabs>
+    <Tab>Tab 1</Tab>
+    <Tab>Tab 2</Tab>
+    <Tab>Tab 3</Tab>
+  </Tabs>
+);
 
-it("renders page correctly", () => {
-  const component = renderer.create(
-    <Tabs>
-      <Tab>TEST</Tab>
-    </Tabs>
-  );
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+it("renders component correctly", () => {
+  expect(shallowToJson(wrapper)).toMatchSnapshot();
 });

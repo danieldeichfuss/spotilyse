@@ -4,78 +4,56 @@ exports[`renders page correctly 1`] = `
 <div
   className="Dashboard"
 >
-  <div
-    className="Tabs"
-  >
-    <ul
-      className="Tabs__list"
+  <Tabs>
+    <Tab
+      tabName="User"
     >
-      <li
-        className="Tab"
-        onClick={[Function]}
-      >
-        <a
-          className="Tab__link active"
-          onClick={[Function]}
-        >
-          User
-        </a>
-      </li>
-      <li
-        className="Tab"
-        onClick={[Function]}
-      >
-        <a
-          className="Tab__link "
-          onClick={[Function]}
-        >
-          Favourite Song
-        </a>
-      </li>
-      <li
-        className="Tab"
-        onClick={[Function]}
-      >
-        <a
-          className="Tab__link "
-          onClick={[Function]}
-        >
-          Top ten
-        </a>
-      </li>
-      <li
-        className="Tab"
-        onClick={[Function]}
-      >
-        <a
-          className="Tab__link "
-          onClick={[Function]}
-        >
-          Discover
-        </a>
-      </li>
-    </ul>
-    <div
-      className="Tabs__active-content"
+      <User
+        user={
+          Object {
+            "imgUrl": "img-url",
+          }
+        }
+      />
+    </Tab>
+    <Tab
+      tabName="Favourite Song"
     >
-      <div
-        className="User"
-      >
-        <img
-          alt="User avatar"
-          className="User__avatar"
-          src={undefined}
-        />
-        <p
-          className="User__intro"
-        >
-          Hi 
-          ,
-          <br />
-          welcome to Spotilyse! Here you can expolore your musical personality and discover your favourite artists.
-        </p>
-      </div>
-    </div>
-  </div>
+      <FavouriteSong
+        favouriteSong="Track Name"
+      />
+    </Tab>
+    <Tab
+      tabName="Top ten"
+    >
+      <TopTen
+        artists={
+          Array [
+            Object {
+              "artist": "Artist Name",
+            },
+          ]
+        }
+        tracks={
+          Array [
+            Object {
+              "name": "Track Name",
+            },
+          ]
+        }
+      />
+    </Tab>
+    <Tab
+      tabName="Discover"
+    >
+      <Discover
+        favouriteArtist={
+          Object {
+            "artist": "Artist Name",
+          }
+        }
+      />
+    </Tab>
+  </Tabs>
 </div>
 `;

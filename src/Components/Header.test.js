@@ -1,16 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Header from "./Header";
-import renderer from "react-test-renderer";
+import { shallow, configure } from "enzyme";
+import ReactSixteenAdapter from "enzyme-adapter-react-16";
+import { shallowToJson } from "enzyme-to-json";
 
-it("renders without crashing", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(<Header />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+configure({ adapter: new ReactSixteenAdapter() });
+
+const wrapper = shallow(<Header />);
 
 it("renders page correctly", () => {
-  const component = renderer.create(<Header />);
-  let tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(shallowToJson(wrapper)).toMatchSnapshot();
 });

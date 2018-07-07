@@ -1,17 +1,23 @@
 import React from "react";
-import Dashboard from "./Dashboard";
+import Discover from "./Discover";
 import { shallow, configure } from "enzyme";
 import { shallowToJson } from "enzyme-to-json";
 import ReactSixteenAdapter from "enzyme-adapter-react-16";
 
 configure({ adapter: new ReactSixteenAdapter() });
-const tracks = [{ name: "Track Name" }];
-const artists = [{ artist: "Artist Name" }];
-const user = { imgUrl: "img-url" };
-const wrapper = shallow(
-  <Dashboard tracks={tracks} artists={artists} user={user} />
-);
+const selectedArtist = [];
+const relatedArtists = {
+  artists: []
+};
+const getRelatedArtists = jest.fn();
 
-it("renders page correctly", () => {
+const wrapper = shallow(
+  <Discover
+    selectedArtist={selectedArtist}
+    getRelatedArtists={getRelatedArtists}
+    relatedArtists={relatedArtists}
+  />
+);
+it("renders component correctly", () => {
   expect(shallowToJson(wrapper)).toMatchSnapshot();
 });

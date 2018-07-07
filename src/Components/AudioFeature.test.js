@@ -1,17 +1,19 @@
 import React from "react";
 import AudioFeature from "./AudioFeature";
-import * as Enzyme from "enzyme";
+import { shallow, configure } from "enzyme";
 import ReactSixteenAdapter from "enzyme-adapter-react-16";
-Enzyme.configure({ adapter: new ReactSixteenAdapter() });
+import { shallowToJson } from "enzyme-to-json";
+
+configure({ adapter: new ReactSixteenAdapter() });
 
 const audioFeature = {
   messages: ["Message 1", "Message 2"]
 };
 const featureValue = 0.5;
-const wrapper = Enzyme.shallow(
+const wrapper = shallow(
   <AudioFeature audioFeature={audioFeature} featureValue={featureValue} />
 );
 
 it("renders page correctly", () => {
-  expect(wrapper).toMatchSnapshot();
+  expect(shallowToJson(wrapper)).toMatchSnapshot();
 });

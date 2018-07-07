@@ -1,24 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders page correctly 1`] = `
+exports[`renders component correctly 1`] = `
 <div
   className="Tabs"
 >
   <ul
     className="Tabs__list"
   >
-    <li
-      className="Tab"
+    <Tab
+      isActive={true}
+      key=".0"
       onClick={[Function]}
+      tabIndex={0}
     >
-      <a
-        className="Tab__link active"
-        onClick={[Function]}
-      />
-    </li>
+      Tab 1
+    </Tab>
+    <Tab
+      isActive={false}
+      key=".1"
+      onClick={[Function]}
+      tabIndex={1}
+    >
+      Tab 2
+    </Tab>
+    <Tab
+      isActive={false}
+      key=".2"
+      onClick={[Function]}
+      tabIndex={2}
+    >
+      Tab 3
+    </Tab>
   </ul>
   <div
     className="Tabs__active-content"
-  />
+  >
+    Tab 1
+  </div>
 </div>
 `;

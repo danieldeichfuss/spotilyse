@@ -1,275 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders page correctly 1`] = `
-ShallowWrapper {
-  "length": 1,
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <AudioFeature
-    audioFeature={
-        Object {
-            "messages": Array [
-              "Message 1",
-              "Message 2",
-            ],
-          }
+<div
+  className="AudioFeature"
+>
+  <div
+    className="AudioFeature__intro-wrapper"
+  >
+    <h3
+      className="AudioFeature__title"
+    >
+      :
+    </h3>
+    <span
+      className="AudioFeature__value"
+    >
+      NaN
+    </span>
+  </div>
+  <div
+    className="AudioFeature__message"
+  />
+  <div
+    className="AudioFeature_img"
+    style={
+      Object {
+        "margin": "auto",
+        "width": "150px",
+      }
     }
-    featureValue={0.5}
-/>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <div
-          className="AudioFeature__intro-wrapper"
->
-          <h3
-                    className="AudioFeature__title"
-          >
-                    :
-          </h3>
-          <span
-                    className="AudioFeature__value"
-          />
-</div>,
-        false,
-        <div
-          className="AudioFeature__message"
-/>,
-        <div
-          className="AudioFeature_img"
-          style={
-                    Object {
-                              "margin": "auto",
-                              "width": "150px",
-                            }
-          }
-/>,
-      ],
-      "className": "AudioFeature",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <h3
-              className="AudioFeature__title"
->
-              :
-</h3>,
-            <span
-              className="AudioFeature__value"
-/>,
-          ],
-          "className": "AudioFeature__intro-wrapper",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                undefined,
-                ":",
-              ],
-              "className": "AudioFeature__title",
-            },
-            "ref": null,
-            "rendered": Array [
-              undefined,
-              ":",
-            ],
-            "type": "h3",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": NaN,
-              "className": "AudioFeature__value",
-            },
-            "ref": null,
-            "rendered": NaN,
-            "type": "span",
-          },
-        ],
-        "type": "div",
-      },
-      false,
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": undefined,
-          "className": "AudioFeature__message",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": null,
-          "className": "AudioFeature_img",
-          "style": Object {
-            "margin": "auto",
-            "width": "150px",
-          },
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <div
-            className="AudioFeature__intro-wrapper"
->
-            <h3
-                        className="AudioFeature__title"
-            >
-                        :
-            </h3>
-            <span
-                        className="AudioFeature__value"
-            />
-</div>,
-          false,
-          <div
-            className="AudioFeature__message"
-/>,
-          <div
-            className="AudioFeature_img"
-            style={
-                        Object {
-                                    "margin": "auto",
-                                    "width": "150px",
-                                  }
-            }
-/>,
-        ],
-        "className": "AudioFeature",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <h3
-                className="AudioFeature__title"
->
-                :
-</h3>,
-              <span
-                className="AudioFeature__value"
-/>,
-            ],
-            "className": "AudioFeature__intro-wrapper",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  undefined,
-                  ":",
-                ],
-                "className": "AudioFeature__title",
-              },
-              "ref": null,
-              "rendered": Array [
-                undefined,
-                ":",
-              ],
-              "type": "h3",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": NaN,
-                "className": "AudioFeature__value",
-              },
-              "ref": null,
-              "rendered": NaN,
-              "type": "span",
-            },
-          ],
-          "type": "div",
-        },
-        false,
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": undefined,
-            "className": "AudioFeature__message",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": null,
-            "className": "AudioFeature_img",
-            "style": Object {
-              "margin": "auto",
-              "width": "150px",
-            },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "div",
-        },
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-      },
-    },
-  },
-}
+  />
+</div>
 `;

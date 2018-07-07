@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders component correctly 1`] = `
+<div
+  className="FavouriteSong"
+>
+  <h2
+    className="FavouriteSong__intro"
+  >
+    What your favourite songs say about you?
+  </h2>
+  <div
+    className="FavouriteSong__song"
+  >
+    <b>
+      Your favourite song is:
+    </b>
+     
+    Favourite Song
+  </div>
+  <div
+    className="FavouriteSong__artist"
+  >
+    <b>
+      Your favourite artist is:
+    </b>
+     
+    Favourite Artist
+  </div>
+  <div
+    className="AudioFeatures"
+  >
+    <AudioFeature
+      audioFeature={
+        Object {
+          "breakPoint": 0.5,
+          "messages": Array [
+            Object {
+              "img": "guitar",
+              "imgPath": "../img/guitar.svg",
+              "text": "You like handmade music",
+            },
+            Object {
+              "img": "robot",
+              "imgPath": "/img/robot.svg",
+              "text": "Humans are stupid, give me robot music",
+            },
+          ],
+          "name": "acousticness",
+          "unit": "%",
+        }
+      }
+      key="acousticness"
+    />
+    <AudioFeature
+      audioFeature={
+        Object {
+          "breakPoint": 0.5,
+          "messages": Array [
+            Object {
+              "img": "dancer",
+              "imgPath": "../img/dancer-male.svg",
+              "text": "You dance like nobody is watching",
+            },
+            Object {
+              "img": "stone",
+              "imgPath": "../img/stone.svg",
+              "text": "Steady like a stone, dancing is for the crazies",
+            },
+          ],
+          "name": "danceability",
+          "unit": "%",
+        }
+      }
+      key="danceability"
+    />
+    <AudioFeature
+      audioFeature={
+        Object {
+          "breakPoint": 0.5,
+          "messages": Array [
+            Object {
+              "img": "thunder",
+              "imgPath": "../img/thunder.svg",
+              "text": "You are pumped! Gimme some of your energiezzzzz",
+            },
+            Object {
+              "img": "sunglasses",
+              "imgPath": "../img/sunglasses.svg",
+              "text": "Keep it mellow my friend",
+            },
+          ],
+          "name": "energy",
+          "unit": "%",
+        }
+      }
+      key="energy"
+    />
+    <AudioFeature
+      audioFeature={
+        Object {
+          "breakPoint": 0.5,
+          "messages": Array [
+            Object {
+              "img": "microphone",
+              "imgPath": "../img/microphone.svg",
+              "text": "Concerts are the best",
+            },
+            Object {
+              "img": "headphones",
+              "imgPath": "../img/headphones.svg",
+              "text": "Please be quiet people, I want to enjoy my music",
+            },
+          ],
+          "name": "liveness",
+          "unit": "%",
+        }
+      }
+      key="liveness"
+    />
+    <AudioFeature
+      audioFeature={
+        Object {
+          "breakPoint": 0.5,
+          "messages": Array [
+            Object {
+              "img": "sun",
+              "imgPath": "../img/sun.svg",
+              "text": "You are a positive person! Keep up the good vibes",
+            },
+            Object {
+              "img": "sad",
+              "imgPath": "../img/sad.svg",
+              "text": "The world is a dark place",
+            },
+          ],
+          "name": "valence",
+          "unit": "%",
+        }
+      }
+      key="valence"
+    />
+    <AudioFeature
+      audioFeature={
+        Object {
+          "breakPoint": 0,
+          "messages": Array [
+            Object {
+              "img": "ear",
+              "imgPath": "../img/ear.svg",
+              "text": "Be careful, protect your ears!",
+            },
+            Object {
+              "img": "cloud",
+              "imgPath": "../img/cloud.svg",
+              "text": "You ears are safe",
+            },
+          ],
+          "name": "loudness",
+          "unit": "db",
+        }
+      }
+      key="loudness"
+    />
+    <AudioFeature
+      audioFeature={
+        Object {
+          "breakPoint": 72,
+          "messages": Array [
+            Object {
+              "img": "bunny",
+              "imgPath": "../img/bunny.svg",
+              "text": "You like it fast",
+            },
+            Object {
+              "img": "snail",
+              "imgPath": "../img/snail.svg",
+              "text": "You like it slow",
+            },
+          ],
+          "name": "tempo",
+          "unit": "bpm",
+        }
+      }
+      key="tempo"
+    />
+  </div>
+</div>
+`;

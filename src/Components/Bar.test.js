@@ -1,10 +1,11 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import Bar from "./Bar";
-import * as Enzyme from "enzyme";
-import ReactSixteenAdapter from "enzyme-adapter-react-16";
-Enzyme.configure({ adapter: new ReactSixteenAdapter() });
 
 const value = 0.5;
-const wrapper = Enzyme.shallow(<Bar favouriteSong={value} />);
 
-it("renders page correctly");
+it("renders without crushing", () => {
+  const div = document.createElement("div");
+  ReactDOM.render(<Bar favouriteSong={value} />, div);
+  ReactDOM.unmountComponentAtNode(div);
+});
