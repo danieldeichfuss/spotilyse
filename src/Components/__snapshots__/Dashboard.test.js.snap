@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders page correctly 1`] = `
+<div
+  className="Dashboard"
+>
+  <Tabs>
+    <Tab
+      tabName="User"
+    >
+      <User
+        user={
+          Object {
+            "imgUrl": "img-url",
+          }
+        }
+      />
+    </Tab>
+    <Tab
+      tabName="Favourite Song"
+    >
+      <FavouriteSong
+        favouriteSong="Track Name"
+      />
+    </Tab>
+    <Tab
+      tabName="Top ten"
+    >
+      <TopTen
+        artists={
+          Array [
+            Object {
+              "artist": "Artist Name",
+            },
+          ]
+        }
+        tracks={
+          Array [
+            Object {
+              "name": "Track Name",
+            },
+          ]
+        }
+      />
+    </Tab>
+    <Tab
+      tabName="Discover"
+    >
+      <Discover
+        favouriteArtist={
+          Object {
+            "artist": "Artist Name",
+          }
+        }
+      />
+    </Tab>
+  </Tabs>
+</div>
+`;

@@ -3,7 +3,7 @@ import React from "react";
 export default function Microphone() {
   return (
     <svg
-      class="microphone"
+      className="microphone"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 47.5 47.5"
       style={{ enableBackground: "new 0 0 47.5 47.5" }}
@@ -17,10 +17,10 @@ export default function Microphone() {
       </defs>
       <g transform="matrix(1.25,0,0,-1.25,0,47.5)" id="g10">
         <g id="g12">
-          <g clip-path="url(#clipPath16)" id="g14">
+          <g clipPath="url(#clipPath16)" id="g14">
             <g transform="translate(36.999,25.0825)" id="g20">
               <path
-                class="head"
+                className="head"
                 id="path22"
                 style={{
                   fill: "#939598",
@@ -33,7 +33,7 @@ export default function Microphone() {
             </g>
             <g transform="translate(33.8096,18.4316)" id="g24">
               <path
-                class="head-band"
+                className="head-band"
                 id="path26"
                 style={{
                   fill: "#58595b",
@@ -46,7 +46,7 @@ export default function Microphone() {
             </g>
             <g transform="translate(27.7393,18.2959)" id="g28">
               <path
-                class="body"
+                className="body"
                 id="path30"
                 style={{
                   fill: "#414042",
@@ -59,7 +59,7 @@ export default function Microphone() {
             </g>
             <g transform="translate(5,31)" id="g32">
               <path
-                class="note notes-left"
+                className="note notes-left"
                 id="path34"
                 style={{
                   fill: "#55acee",
@@ -72,7 +72,7 @@ export default function Microphone() {
             </g>
             <g transform="translate(19,36)" id="g36">
               <path
-                class="note note-right"
+                className="note note-right"
                 id="path38"
                 style={{
                   fill: "#55acee",

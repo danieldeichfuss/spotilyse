@@ -104,16 +104,6 @@ class App extends Component {
   }
 
   render() {
-    // TODO: für später
-    // let topTracksToRender =
-    //   this.state.serverData.user && this.state.serverData.user.tracks
-    //     ? this.state.serverData.user.tracks.filter(playlist =>
-    //         playlist.name
-    //           .toLowerCase()
-    //           .includes(this.state.filterString.toLowerCase())
-    //       )
-    //     : [];
-
     if (!this.state.isLoggedIn) {
       return (
         <div className="App">
@@ -127,7 +117,6 @@ class App extends Component {
       return (
         <div className="App">
           <Header />
-          {/* TODO: extract component spinner */}
           <div className="Spinner">...Loading</div>
         </div>
       );

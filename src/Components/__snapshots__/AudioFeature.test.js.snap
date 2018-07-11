@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders page correctly 1`] = `
+<div
+  className="AudioFeature"
+>
+  <div
+    className="AudioFeature__intro-wrapper"
+  >
+    <h3
+      className="AudioFeature__title"
+    >
+      :
+    </h3>
+    <span
+      className="AudioFeature__value"
+    >
+      NaN
+    </span>
+  </div>
+  <div
+    className="AudioFeature__message"
+  />
+  <div
+    className="AudioFeature_img"
+    style={
+      Object {
+        "margin": "auto",
+        "width": "150px",
+      }
+    }
+  />
+</div>
+`;

@@ -3,7 +3,7 @@ import React from "react";
 export default function Guitar() {
   return (
     <svg
-      class="guitar"
+      className="guitar"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 47.5 47.5"
       style={{ enableBackground: "new 0 0 47.5 47.5" }}
@@ -17,10 +17,10 @@ export default function Guitar() {
       </defs>
       <g transform="matrix(1.25,0,0,-1.25,0,47.5)" id="g10">
         <g id="g12">
-          <g clip-path="url(#clipPath16)" id="g14">
+          <g clipPath="url(#clipPath16)" id="g14">
             <g transform="translate(25.9248,18.7485)" id="g20">
               <path
-                class="body"
+                className="body"
                 id="path22"
                 style={{
                   fill: "#f18f26",
@@ -33,7 +33,7 @@ export default function Guitar() {
             </g>
             <g transform="translate(33.0488,30.9287)" id="g24">
               <path
-                class="neck"
+                className="neck"
                 id="path26"
                 style={{
                   fill: "#642116",
@@ -46,7 +46,7 @@ export default function Guitar() {
             </g>
             <g transform="translate(36.2041,33.8145)" id="g28">
               <path
-                class="head"
+                className="head"
                 id="path30"
                 style={{
                   fill: "#f18f26",
@@ -59,7 +59,7 @@ export default function Guitar() {
             </g>
             <g transform="translate(21,17.4648)" id="g32">
               <path
-                class="pickup pickup-neck"
+                className="pickup pickup-neck"
                 id="path34"
                 style={{
                   fill: "#ccd6dd",
@@ -72,7 +72,7 @@ export default function Guitar() {
             </g>
             <g transform="translate(17.4639,13.9287)" id="g36">
               <path
-                class="pickup pickup-bridge"
+                className="pickup pickup-bridge"
                 id="path38"
                 style={{
                   fill: "#ccd6dd",
@@ -85,7 +85,7 @@ export default function Guitar() {
             </g>
             <g transform="translate(13.9282,11.8076)" id="g40">
               <path
-                class="bridge"
+                className="bridge"
                 id="path42"
                 style={{
                   fill: "#642116",

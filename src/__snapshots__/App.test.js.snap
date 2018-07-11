@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders start page correctly 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="Header"
+  >
+    <h1
+      className="Header__title"
+    >
+      Spotilyse
+    </h1>
+    <p
+      className="Header__intro"
+    >
+      Your Spotify personality dashboard
+    </p>
+  </header>
+  <div
+    className="Login"
+  >
+    <p
+      className="Login__intro"
+    >
+      Take a deep dive into your soul ...
+    </p>
+    <svg
+      className="eyes"
+      id="svg2"
+      viewBox="0 0 47.5 47.5"
+    >
+      <defs
+        id="defs6"
+      >
+        <clipPath
+          clipPathUnits="userSpaceOnUse"
+          id="clipPath16"
+        >
+          <path
+            d="M 0,38 38,38 38,0 0,0 0,38 Z"
+            id="path18"
+          />
+        </clipPath>
+      </defs>
+      <g
+        id="g10"
+        transform="matrix(1.25,0,0,-1.25,0,47.5)"
+      >
+        <g
+          id="g12"
+        >
+          <g
+            clipPath="url(#clipPath16)"
+            id="g14"
+          >
+            <g
+              id="g20"
+              transform="translate(18,19)"
+            >
+              <path
+                className="eye-ball eye-ball-left"
+                d="m 0,0 c 0,-5.522 -3.806,-10 -8.5,-10 -4.694,0 -8.5,4.478 -8.5,10 0,5.523 3.806,10 8.5,10 C -3.806,10 0,5.523 0,0"
+                id="path22"
+                style={
+                  Object {
+                    "fill": "#e1e8ed",
+                    "fillOpacity": 1,
+                    "fillRule": "nonzero",
+                    "stroke": "none",
+                  }
+                }
+              />
+            </g>
+            <g
+              id="g24"
+              transform="translate(37,19)"
+            >
+              <path
+                className="eye-ball eye-ball-right"
+                d="m 0,0 c 0,-5.522 -3.806,-10 -8.5,-10 -4.694,0 -8.5,4.478 -8.5,10 0,5.523 3.806,10 8.5,10 C -3.806,10 0,5.523 0,0"
+                id="path26"
+                style={
+                  Object {
+                    "fill": "#e1e8ed",
+                    "fillOpacity": 1,
+                    "fillRule": "nonzero",
+                    "stroke": "none",
+                  }
+                }
+              />
+            </g>
+            <g
+              id="g28"
+              transform="translate(9,15)"
+            >
+              <path
+                className="eye-dot eye-dot-left"
+                d="m 0,0 c 0,-1.657 -1.343,-3 -3,-3 -1.657,0 -3,1.343 -3,3 0,1.657 1.343,3 3,3 1.657,0 3,-1.343 3,-3"
+                id="path30"
+                style={
+                  Object {
+                    "fill": "#292f33",
+                    "fillOpacity": 1,
+                    "fillRule": "nonzero",
+                    "stroke": "none",
+                  }
+                }
+              />
+            </g>
+            <g
+              id="g32"
+              transform="translate(28,15)"
+            >
+              <path
+                className="eye-dot eye-dot-left"
+                d="m 0,0 c 0,-1.657 -1.344,-3 -3,-3 -1.656,0 -3,1.343 -3,3 0,1.657 1.344,3 3,3 1.656,0 3,-1.343 3,-3"
+                id="path34"
+                style={
+                  Object {
+                    "fill": "#292f33",
+                    "fillOpacity": 1,
+                    "fillRule": "nonzero",
+                    "stroke": "none",
+                  }
+                }
+              />
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+    <p
+      className="Login__intro"
+    >
+      ... I mean musical Soul
+    </p>
+    <button
+      className="Button"
+      onClick={[Function]}
+    >
+      Login with Spotify
+    </button>
+  </div>
+</div>
+`;

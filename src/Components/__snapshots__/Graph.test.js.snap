@@ -1,0 +1,217 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders page correctly 1`] = `
+<ul
+  className="Discover__list"
+>
+  <CSSTransitionGroup
+    transitionAppear={true}
+    transitionAppearTimeout={1000}
+    transitionEnter={false}
+    transitionLeave={false}
+    transitionName="GraphTransition"
+  >
+    <li
+      className="Discover__item Discover__item--selected"
+    >
+      <div
+        className="Discover__item__container"
+      >
+        <b>
+          Selected Artist:  
+        </b>
+      </div>
+    </li>
+  </CSSTransitionGroup>
+  <li
+    className="Discover__item"
+    key="0"
+    style={
+      Object {
+        "transform": "translate(300px, 0px)",
+      }
+    }
+  >
+    <a
+      onClick={[Function]}
+    >
+      <div
+        className="Discover__item__container"
+      >
+        Artist 1
+      </div>
+    </a>
+  </li>
+  <li
+    className="Discover__item"
+    key="1"
+    style={
+      Object {
+        "transform": "translate(242px, 176px)",
+      }
+    }
+  >
+    <a
+      onClick={[Function]}
+    >
+      <div
+        className="Discover__item__container"
+      >
+        Artist 2
+      </div>
+    </a>
+  </li>
+  <li
+    className="Discover__item"
+    key="2"
+    style={
+      Object {
+        "transform": "translate(92px, 285px)",
+      }
+    }
+  >
+    <a
+      onClick={[Function]}
+    >
+      <div
+        className="Discover__item__container"
+      >
+        Artist 3
+      </div>
+    </a>
+  </li>
+  <li
+    className="Discover__item"
+    key="3"
+    style={
+      Object {
+        "transform": "translate(-93px, 285px)",
+      }
+    }
+  >
+    <a
+      onClick={[Function]}
+    >
+      <div
+        className="Discover__item__container"
+      >
+        Artist 4
+      </div>
+    </a>
+  </li>
+  <li
+    className="Discover__item"
+    key="4"
+    style={
+      Object {
+        "transform": "translate(-243px, 176px)",
+      }
+    }
+  >
+    <a
+      onClick={[Function]}
+    >
+      <div
+        className="Discover__item__container"
+      >
+        Artist 5
+      </div>
+    </a>
+  </li>
+  <li
+    className="Discover__item"
+    key="5"
+    style={
+      Object {
+        "transform": "translate(-300px, 0px)",
+      }
+    }
+  >
+    <a
+      onClick={[Function]}
+    >
+      <div
+        className="Discover__item__container"
+      >
+        Artist 6
+      </div>
+    </a>
+  </li>
+  <li
+    className="Discover__item"
+    key="6"
+    style={
+      Object {
+        "transform": "translate(-243px, -177px)",
+      }
+    }
+  >
+    <a
+      onClick={[Function]}
+    >
+      <div
+        className="Discover__item__container"
+      >
+        Artist 7
+      </div>
+    </a>
+  </li>
+  <li
+    className="Discover__item"
+    key="7"
+    style={
+      Object {
+        "transform": "translate(-93px, -286px)",
+      }
+    }
+  >
+    <a
+      onClick={[Function]}
+    >
+      <div
+        className="Discover__item__container"
+      >
+        Artist 8
+      </div>
+    </a>
+  </li>
+  <li
+    className="Discover__item"
+    key="8"
+    style={
+      Object {
+        "transform": "translate(92px, -286px)",
+      }
+    }
+  >
+    <a
+      onClick={[Function]}
+    >
+      <div
+        className="Discover__item__container"
+      >
+        Artist 9
+      </div>
+    </a>
+  </li>
+  <li
+    className="Discover__item"
+    key="9"
+    style={
+      Object {
+        "transform": "translate(242px, -177px)",
+      }
+    }
+  >
+    <a
+      onClick={[Function]}
+    >
+      <div
+        className="Discover__item__container"
+      >
+        Artist 10
+      </div>
+    </a>
+  </li>
+</ul>
+`;

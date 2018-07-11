@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders component correctly 1`] = `
+<div
+  className="Discover"
+>
+  <h2
+    className="Discover__title"
+  >
+    Discover your favourite Artists
+  </h2>
+  <Graph
+    getRelatedArtists={[Function]}
+    relatedArtists={Array []}
+    selectedArtist={Array []}
+  />
+</div>
+`;

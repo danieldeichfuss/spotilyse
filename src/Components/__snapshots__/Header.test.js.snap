@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders page correctly 1`] = `
+<header
+  className="Header"
+>
+  <h1
+    className="Header__title"
+  >
+    Spotilyse
+  </h1>
+  <p
+    className="Header__intro"
+  >
+    Your Spotify personality dashboard
+  </p>
+</header>
+`;
