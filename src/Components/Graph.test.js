@@ -14,13 +14,32 @@ const relatedArtists = [
   },
   {
     name: "Artist 3"
+  },
+  {
+    name: "Artist 4"
+  },
+  {
+    name: "Artist 5"
+  },
+  {
+    name: "Artist 6"
+  },
+  {
+    name: "Artist 7"
+  },
+  {
+    name: "Artist 8"
+  },
+  {
+    name: "Artist 9"
+  },
+  {
+    name: "Artist 10"
   }
 ];
 const getRelatedArtists = jest.fn();
 const selectedArtist = "Selected Artist";
-console.log(relatedArtists);
 
-debugger;
 const wrapper = shallow(
   <Graph
     relatedArtists={relatedArtists}
@@ -31,5 +50,3 @@ const wrapper = shallow(
 it("renders page correctly", () => {
   expect(shallowToJson(wrapper)).toMatchSnapshot();
 });
-
-it("renders page correctly");
