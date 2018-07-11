@@ -2,14 +2,14 @@ import React from "react";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 function Graph({ relatedArtists, getRelatedArtists, selectedArtist }) {
-  const nodePositions = calculateNodePosition(10, { x: 0, y: 0 }, 300);
+  const nodePositions = calculateNodePosition(10, { x: 0, y: 0 }, 18);
   const nodesToRender = combineArrays(nodePositions, relatedArtists);
   let artistsToRender = nodesToRender.map((artist, i) => (
     <li
       className="Discover__item"
       key={i.toString()}
       style={{
-        transform: "translate(" + artist[0].x + "px, " + artist[0].y + "px)"
+        transform: "translate(" + artist[0].x + "em, " + artist[0].y + "em)"
       }}
     >
       <a
