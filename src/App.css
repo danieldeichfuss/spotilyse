@@ -950,7 +950,7 @@ body {
 }
 
 .Logo__curl-top {
-  animation: curl-top 3.5s ease-in-out infinite;
+  animation: curl-top 3.5s cubic-bezier(0.59, 0.01, 0.92, 0.89) infinite;
   transform-origin: 150px 150px;
 }
 
@@ -960,26 +960,7 @@ body {
   }
 
   30% {
-    transform: rotate(-362deg);
-  }
-
-  60% {
-    transform: rotate(0);
-  }
-}
-
-.Logo__curl-bottom {
-  animation: curl-top 2.5s ease-in-out infinite;
-  transform-origin: 150px 150px;
-}
-
-@keyframes curl-top {
-  from {
-    transform: rotate(0);
-  }
-
-  30% {
-    transform: rotate(-180deg);
+    transform: rotate(-360deg);
   }
 
   60% {
@@ -997,13 +978,13 @@ body {
     transform: scale(1);
   }
 
-  80% {
+  50% {
     transform: scale(0.3);
   }
 }
 
 .Logo__donut-inner {
-  animation: donut-inner 3.5s ease-in-out infinite;
+  animation: donut-inner 2.5s ease-in-out infinite;
   transform-origin: 500px 190px;
 }
 
@@ -1012,7 +993,7 @@ body {
     transform: scale(0.3);
   }
 
-  80% {
+  50% {
     transform: scale(3);
   }
 }
