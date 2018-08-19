@@ -8,7 +8,7 @@ import queryString from "query-string";
 class App extends Component {
   constructor() {
     super();
-    this.state = { isLoading: false, isLoggedIn: false };
+    this.state = { isLoading: false, isLoggedIn: false, notEnoughData: false };
     this.getRelatedArtists = this.getRelatedArtists.bind(this);
   }
   componentDidMount() {
@@ -23,15 +23,21 @@ class App extends Component {
       headers: { Authorization: "Bearer " + this.accessToken }
     })
       .then(response => response.json())
-      .then(data =>
+      .then(data => {
+        if (!data.images[0]) {
+          this.setState({
+            notEnoughData: true
+          });
+          return;
+        }
         this.setState({
           user: {
             name: data.display_name,
             product: data.product,
             imageUrl: data.images[0].url
           }
-        })
-      );
+        });
+      });
 
     // Get Top Artists
     const topArtistsPromise = fetch(
@@ -42,6 +48,12 @@ class App extends Component {
     )
       .then(response => response.json())
       .then(data => {
+        if (!data.items[0]) {
+          this.setState({
+            notEnoughData: true
+          });
+          return;
+        }
         this.setState({
           artists: data.items,
           selectedArtist: data.items[0]
@@ -71,6 +83,13 @@ class App extends Component {
     )
       .then(response => response.json())
       .then(data => {
+        if (!data.items[0]) {
+          this.setState({
+            notEnoughData: true
+          });
+          return;
+        }
+
         this.setState({
           tracks: data.items
         });
@@ -118,6 +137,21 @@ class App extends Component {
         <div className="App">
           <Header />
           <div className="Spinner">...Loading</div>
+        </div>
+      );
+    }
+
+    if (this.state.notEnoughData) {
+      return (
+        <div className="App">
+          <Header />
+          <div className="Error">
+            <h2 className="Error__Headline">No data = no fun for you</h2>
+            <p className="Error__Description">
+              You need to listen to more music!
+              <br /> (Or maybe add a profile image)
+            </p>
+          </div>
         </div>
       );
     }

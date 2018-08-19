@@ -94,6 +94,12 @@ body {
   justify-content: center;
 }
 
+.Error {
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+}
+
 .User {
   display: flex;
   flex-direction: column;
